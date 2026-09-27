@@ -1,0 +1,11 @@
+# Main environment: labs, mock API and dbt.
+# Airflow is NOT installed here (see requirements-airflow.txt).
+duckdb==1.5.5
+dbt-core==1.11.15
+dbt-duckdb==1.11.0
+fastapi==0.141.1
+uvicorn==0.54.0
+requests==2.34.2
+tenacity==9.1.4
+pytest==9.1.1
+ruff==0.16.9

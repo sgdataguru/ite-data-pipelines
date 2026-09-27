@@ -1,0 +1,1602 @@
+[
+  {
+    "record_id": 1,
+    "student_id": "S0009",
+    "module_code": "DE103",
+    "assessment": "Project",
+    "score": 54,
+    "updated_at": "2026-09-10T02:23:03"
+  },
+  {
+    "record_id": 2,
+    "student_id": "S0012",
+    "module_code": "BA102",
+    "assessment": "Quiz 2",
+    "score": 35,
+    "updated_at": "2026-09-07T07:48:01"
+  },
+  {
+    "record_id": 3,
+    "student_id": "S0006",
+    "module_code": "CS101",
+    "assessment": "Project",
+    "score": 78,
+    "updated_at": "2026-08-31T21:06:52"
+  },
+  {
+    "record_id": 4,
+    "student_id": "S0023",
+    "module_code": "IT101",
+    "assessment": "Lab Test",
+    "score": 65,
+    "updated_at": "2026-09-20T03:20:17"
+  },
+  {
+    "record_id": 5,
+    "student_id": "S0025",
+    "module_code": "DE102",
+    "assessment": "Final Exam",
+    "score": 57,
+    "updated_at": "2026-09-10T20:27:45"
+  },
+  {
+    "record_id": 6,
+    "student_id": "S0035",
+    "module_code": "IT101",
+    "assessment": "Lab Test",
+    "score": 57,
+    "updated_at": "2026-09-03T12:10:40"
+  },
+  {
+    "record_id": 7,
+    "student_id": "S0038",
+    "module_code": "CS101",
+    "assessment": "Project",
+    "score": 55,
+    "updated_at": "2026-08-27T06:26:26"
+  },
+  {
+    "record_id": 8,
+    "student_id": "S0033",
+    "module_code": "DE101",
+    "assessment": "Quiz 1",
+    "score": 43,
+    "updated_at": "2026-09-19T13:49:53"
+  },
+  {
+    "record_id": 9,
+    "student_id": "S0001",
+    "module_code": "DE101",
+    "assessment": "Quiz 2",
+    "score": 87,
+    "updated_at": "2026-09-13T12:20:13"
+  },
+  {
+    "record_id": 10,
+    "student_id": "S0002",
+    "module_code": "CS103",
+    "assessment": "Quiz 2",
+    "score": 83,
+    "updated_at": "2026-09-25T12:09:52"
+  },
+  {
+    "record_id": 11,
+    "student_id": "S0029",
+    "module_code": "DE103",
+    "assessment": "Quiz 1",
+    "score": 64,
+    "updated_at": "2026-09-09T23:37:35"
+  },
+  {
+    "record_id": 12,
+    "student_id": "S0029",
+    "module_code": "DE102",
+    "assessment": "Lab Test",
+    "score": 91,
+    "updated_at": "2026-09-04T04:41:41"
+  },
+  {
+    "record_id": 13,
+    "student_id": "S0020",
+    "module_code": "BA103",
+    "assessment": "Final Exam",
+    "score": 87,
+    "updated_at": "2026-09-02T22:59:35"
+  },
+  {
+    "record_id": 14,
+    "student_id": "S0019",
+    "module_code": "IT102",
+    "assessment": "Quiz 1",
+    "score": 38,
+    "updated_at": "2026-09-15T19:39:02"
+  },
+  {
+    "record_id": 15,
+    "student_id": "S0014",
+    "module_code": "CS101",
+    "assessment": "Project",
+    "score": 63,
+    "updated_at": "2026-09-09T22:50:44"
+  },
+  {
+    "record_id": 16,
+    "student_id": "S0011",
+    "module_code": "IT101",
+    "assessment": "Project",
+    "score": 51,
+    "updated_at": "2026-08-27T13:08:28"
+  },
+  {
+    "record_id": 17,
+    "student_id": "S0022",
+    "module_code": "CS101",
+    "assessment": "Quiz 2",
+    "score": 73,
+    "updated_at": "2026-08-30T09:26:32"
+  },
+  {
+    "record_id": 18,
+    "student_id": "S0035",
+    "module_code": "IT103",
+    "assessment": "Lab Test",
+    "score": 92,
+    "updated_at": "2026-09-13T23:23:28"
+  },
+  {
+    "record_id": 19,
+    "student_id": "S0012",
+    "module_code": "BA101",
+    "assessment": "Quiz 1",
+    "score": 60,
+    "updated_at": "2026-09-11T04:07:34"
+  },
+  {
+    "record_id": 20,
+    "student_id": "S0011",
+    "module_code": "IT102",
+    "assessment": "Project",
+    "score": 83,
+    "updated_at": "2026-09-01T15:04:28"
+  },
+  {
+    "record_id": 21,
+    "student_id": "S0004",
+    "module_code": "BA101",
+    "assessment": "Quiz 1",
+    "score": 100,
+    "updated_at": "2026-09-09T08:51:16"
+  },
+  {
+    "record_id": 22,
+    "student_id": "S0036",
+    "module_code": "BA103",
+    "assessment": "Quiz 2",
+    "score": 100,
+    "updated_at": "2026-09-11T21:17:16"
+  },
+  {
+    "record_id": 23,
+    "student_id": "S0040",
+    "module_code": "DE101",
+    "assessment": "Lab Test",
+    "score": 84,
+    "updated_at": "2026-08-31T05:27:04"
+  },
+  {
+    "record_id": 24,
+    "student_id": "S0015",
+    "module_code": "IT102",
+    "assessment": "Final Exam",
+    "score": 89,
+    "updated_at": "2026-09-06T22:38:03"
+  },
+  {
+    "record_id": 25,
+    "student_id": "S0040",
+    "module_code": "DE102",
+    "assessment": "Final Exam",
+    "score": 83,
+    "updated_at": "2026-09-08T10:57:52"
+  },
+  {
+    "record_id": 26,
+    "student_id": "S0002",
+    "module_code": "CS101",
+    "assessment": "Quiz 2",
+    "score": 57,
+    "updated_at": "2026-09-01T22:29:31"
+  },
+  {
+    "record_id": 27,
+    "student_id": "S0040",
+    "module_code": "DE103",
+    "assessment": "Quiz 2",
+    "score": 90,
+    "updated_at": "2026-08-31T20:15:17"
+  },
+  {
+    "record_id": 28,
+    "student_id": "S0013",
+    "module_code": "DE102",
+    "assessment": "Final Exam",
+    "score": 45,
+    "updated_at": "2026-09-20T19:44:45"
+  },
+  {
+    "record_id": 29,
+    "student_id": "S0008",
+    "module_code": "BA102",
+    "assessment": "Quiz 1",
+    "score": 93,
+    "updated_at": "2026-08-27T13:12:53"
+  },
+  {
+    "record_id": 30,
+    "student_id": "S0023",
+    "module_code": "IT103",
+    "assessment": "Project",
+    "score": 65,
+    "updated_at": "2026-09-10T03:46:47"
+  },
+  {
+    "record_id": 31,
+    "student_id": "S0020",
+    "module_code": "BA101",
+    "assessment": "Quiz 1",
+    "score": 78,
+    "updated_at": "2026-09-18T10:26:40"
+  },
+  {
+    "record_id": 32,
+    "student_id": "S0030",
+    "module_code": "CS101",
+    "assessment": "Quiz 1",
+    "score": 48,
+    "updated_at": "2026-09-16T11:50:40"
+  },
+  {
+    "record_id": 33,
+    "student_id": "S0036",
+    "module_code": "BA103",
+    "assessment": "Final Exam",
+    "score": 58,
+    "updated_at": "2026-09-19T16:48:50"
+  },
+  {
+    "record_id": 34,
+    "student_id": "S0006",
+    "module_code": "CS102",
+    "assessment": "Quiz 2",
+    "score": 91,
+    "updated_at": "2026-09-03T02:46:01"
+  },
+  {
+    "record_id": 35,
+    "student_id": "S0007",
+    "module_code": "IT101",
+    "assessment": "Quiz 2",
+    "score": 46,
+    "updated_at": "2026-09-24T18:00:29"
+  },
+  {
+    "record_id": 36,
+    "student_id": "S0030",
+    "module_code": "CS102",
+    "assessment": "Project",
+    "score": 98,
+    "updated_at": "2026-09-22T18:31:54"
+  },
+  {
+    "record_id": 37,
+    "student_id": "S0029",
+    "module_code": "DE103",
+    "assessment": "Quiz 1",
+    "score": 41,
+    "updated_at": "2026-09-05T23:03:02"
+  },
+  {
+    "record_id": 38,
+    "student_id": "S0012",
+    "module_code": "BA102",
+    "assessment": "Lab Test",
+    "score": 66,
+    "updated_at": "2026-09-05T03:17:33"
+  },
+  {
+    "record_id": 39,
+    "student_id": "S0007",
+    "module_code": "IT102",
+    "assessment": "Quiz 1",
+    "score": 53,
+    "updated_at": "2026-08-27T12:01:40"
+  },
+  {
+    "record_id": 40,
+    "student_id": "S0039",
+    "module_code": "IT103",
+    "assessment": "Project",
+    "score": 48,
+    "updated_at": "2026-09-14T18:11:23"
+  },
+  {
+    "record_id": 41,
+    "student_id": "S0024",
+    "module_code": "BA102",
+    "assessment": "Quiz 1",
+    "score": 68,
+    "updated_at": "2026-09-10T06:09:00"
+  },
+  {
+    "record_id": 42,
+    "student_id": "S0028",
+    "module_code": "BA101",
+    "assessment": "Quiz 2",
+    "score": 58,
+    "updated_at": "2026-08-31T03:20:15"
+  },
+  {
+    "record_id": 43,
+    "student_id": "S0027",
+    "module_code": "IT102",
+    "assessment": "Final Exam",
+    "score": 67,
+    "updated_at": "2026-08-31T03:36:15"
+  },
+  {
+    "record_id": 44,
+    "student_id": "S0030",
+    "module_code": "CS103",
+    "assessment": "Lab Test",
+    "score": 61,
+    "updated_at": "2026-08-28T01:56:18"
+  },
+  {
+    "record_id": 45,
+    "student_id": "S0029",
+    "module_code": "DE102",
+    "assessment": "Final Exam",
+    "score": 74,
+    "updated_at": "2026-09-12T20:41:42"
+  },
+  {
+    "record_id": 46,
+    "student_id": "S0020",
+    "module_code": "BA101",
+    "assessment": "Quiz 1",
+    "score": 60,
+    "updated_at": "2026-08-27T13:56:10"
+  },
+  {
+    "record_id": 47,
+    "student_id": "S0039",
+    "module_code": "IT103",
+    "assessment": "Quiz 1",
+    "score": 78,
+    "updated_at": "2026-09-06T00:58:11"
+  },
+  {
+    "record_id": 48,
+    "student_id": "S0028",
+    "module_code": "BA101",
+    "assessment": "Final Exam",
+    "score": 83,
+    "updated_at": "2026-09-20T13:54:48"
+  },
+  {
+    "record_id": 49,
+    "student_id": "S0024",
+    "module_code": "BA103",
+    "assessment": "Final Exam",
+    "score": 76,
+    "updated_at": "2026-08-29T02:36:09"
+  },
+  {
+    "record_id": 50,
+    "student_id": "S0025",
+    "module_code": "DE102",
+    "assessment": "Lab Test",
+    "score": 84,
+    "updated_at": "2026-09-08T17:23:20"
+  },
+  {
+    "record_id": 51,
+    "student_id": "S0017",
+    "module_code": "DE102",
+    "assessment": "Lab Test",
+    "score": 87,
+    "updated_at": "2026-09-03T03:05:51"
+  },
+  {
+    "record_id": 52,
+    "student_id": "S0003",
+    "module_code": "IT103",
+    "assessment": "Lab Test",
+    "score": 41,
+    "updated_at": "2026-09-20T02:40:06"
+  },
+  {
+    "record_id": 53,
+    "student_id": "S0022",
+    "module_code": "CS103",
+    "assessment": "Project",
+    "score": 73,
+    "updated_at": "2026-09-13T06:08:56"
+  },
+  {
+    "record_id": 54,
+    "student_id": "S0001",
+    "module_code": "DE101",
+    "assessment": "Quiz 1",
+    "score": 44,
+    "updated_at": "2026-09-14T15:20:14"
+  },
+  {
+    "record_id": 55,
+    "student_id": "S0012",
+    "module_code": "BA102",
+    "assessment": "Final Exam",
+    "score": 93,
+    "updated_at": "2026-09-20T17:50:54"
+  },
+  {
+    "record_id": 56,
+    "student_id": "S0040",
+    "module_code": "DE103",
+    "assessment": "Lab Test",
+    "score": 51,
+    "updated_at": "2026-09-20T12:03:43"
+  },
+  {
+    "record_id": 57,
+    "student_id": "S0027",
+    "module_code": "IT101",
+    "assessment": "Quiz 1",
+    "score": 48,
+    "updated_at": "2026-09-22T06:18:59"
+  },
+  {
+    "record_id": 58,
+    "student_id": "S0038",
+    "module_code": "CS101",
+    "assessment": "Quiz 1",
+    "score": 52,
+    "updated_at": "2026-09-04T08:25:16"
+  },
+  {
+    "record_id": 59,
+    "student_id": "S0036",
+    "module_code": "BA103",
+    "assessment": "Lab Test",
+    "score": 87,
+    "updated_at": "2026-09-07T17:44:46"
+  },
+  {
+    "record_id": 60,
+    "student_id": "S0036",
+    "module_code": "BA101",
+    "assessment": "Quiz 2",
+    "score": 41,
+    "updated_at": "2026-09-05T14:53:38"
+  },
+  {
+    "record_id": 61,
+    "student_id": "S0020",
+    "module_code": "BA102",
+    "assessment": "Final Exam",
+    "score": 56,
+    "updated_at": "2026-08-27T07:16:44"
+  },
+  {
+    "record_id": 62,
+    "student_id": "S0026",
+    "module_code": "CS103",
+    "assessment": "Quiz 1",
+    "score": 93,
+    "updated_at": "2026-08-28T21:05:03"
+  },
+  {
+    "record_id": 63,
+    "student_id": "S0027",
+    "module_code": "IT103",
+    "assessment": "Quiz 2",
+    "score": 35,
+    "updated_at": "2026-09-11T19:07:13"
+  },
+  {
+    "record_id": 64,
+    "student_id": "S0007",
+    "module_code": "IT102",
+    "assessment": "Quiz 2",
+    "score": 69,
+    "updated_at": "2026-09-03T07:44:07"
+  },
+  {
+    "record_id": 65,
+    "student_id": "S0034",
+    "module_code": "CS103",
+    "assessment": "Quiz 2",
+    "score": 76,
+    "updated_at": "2026-09-18T00:29:08"
+  },
+  {
+    "record_id": 66,
+    "student_id": "S0019",
+    "module_code": "IT101",
+    "assessment": "Quiz 2",
+    "score": 94,
+    "updated_at": "2026-09-07T00:07:27"
+  },
+  {
+    "record_id": 67,
+    "student_id": "S0005",
+    "module_code": "DE103",
+    "assessment": "Quiz 1",
+    "score": 36,
+    "updated_at": "2026-09-07T22:21:37"
+  },
+  {
+    "record_id": 68,
+    "student_id": "S0037",
+    "module_code": "DE103",
+    "assessment": "Lab Test",
+    "score": 63,
+    "updated_at": "2026-09-16T07:28:48"
+  },
+  {
+    "record_id": 69,
+    "student_id": "S0022",
+    "module_code": "CS102",
+    "assessment": "Lab Test",
+    "score": 49,
+    "updated_at": "2026-08-30T08:45:24"
+  },
+  {
+    "record_id": 70,
+    "student_id": "S0005",
+    "module_code": "DE103",
+    "assessment": "Project",
+    "score": 79,
+    "updated_at": "2026-09-19T01:35:17"
+  },
+  {
+    "record_id": 71,
+    "student_id": "S0011",
+    "module_code": "IT101",
+    "assessment": "Final Exam",
+    "score": 67,
+    "updated_at": "2026-09-19T22:33:05"
+  },
+  {
+    "record_id": 72,
+    "student_id": "S0025",
+    "module_code": "DE103",
+    "assessment": "Lab Test",
+    "score": 59,
+    "updated_at": "2026-09-16T15:21:17"
+  },
+  {
+    "record_id": 73,
+    "student_id": "S0012",
+    "module_code": "BA103",
+    "assessment": "Quiz 1",
+    "score": 52,
+    "updated_at": "2026-09-11T19:38:13"
+  },
+  {
+    "record_id": 74,
+    "student_id": "S0035",
+    "module_code": "IT102",
+    "assessment": "Quiz 2",
+    "score": 70,
+    "updated_at": "2026-09-02T18:02:46"
+  },
+  {
+    "record_id": 75,
+    "student_id": "S0003",
+    "module_code": "IT102",
+    "assessment": "Lab Test",
+    "score": 93,
+    "updated_at": "2026-09-06T16:35:21"
+  },
+  {
+    "record_id": 76,
+    "student_id": "S0007",
+    "module_code": "IT102",
+    "assessment": "Quiz 1",
+    "score": 68,
+    "updated_at": "2026-09-05T15:13:00"
+  },
+  {
+    "record_id": 77,
+    "student_id": "S0005",
+    "module_code": "DE103",
+    "assessment": "Lab Test",
+    "score": 73,
+    "updated_at": "2026-09-19T09:26:07"
+  },
+  {
+    "record_id": 78,
+    "student_id": "S0004",
+    "module_code": "BA102",
+    "assessment": "Project",
+    "score": 46,
+    "updated_at": "2026-09-15T23:15:33"
+  },
+  {
+    "record_id": 79,
+    "student_id": "S0013",
+    "module_code": "DE103",
+    "assessment": "Quiz 1",
+    "score": 75,
+    "updated_at": "2026-09-15T22:34:54"
+  },
+  {
+    "record_id": 80,
+    "student_id": "S0002",
+    "module_code": "CS101",
+    "assessment": "Quiz 1",
+    "score": 67,
+    "updated_at": "2026-09-01T12:43:29"
+  },
+  {
+    "record_id": 81,
+    "student_id": "S0034",
+    "module_code": "CS103",
+    "assessment": "Final Exam",
+    "score": 63,
+    "updated_at": "2026-09-23T16:12:48"
+  },
+  {
+    "record_id": 82,
+    "student_id": "S0023",
+    "module_code": "IT101",
+    "assessment": "Project",
+    "score": 89,
+    "updated_at": "2026-09-22T17:25:30"
+  },
+  {
+    "record_id": 83,
+    "student_id": "S0022",
+    "module_code": "CS102",
+    "assessment": "Final Exam",
+    "score": 67,
+    "updated_at": "2026-08-29T19:34:02"
+  },
+  {
+    "record_id": 84,
+    "student_id": "S0034",
+    "module_code": "CS103",
+    "assessment": "Final Exam",
+    "score": 45,
+    "updated_at": "2026-09-24T17:46:31"
+  },
+  {
+    "record_id": 85,
+    "student_id": "S0028",
+    "module_code": "BA102",
+    "assessment": "Final Exam",
+    "score": 40,
+    "updated_at": "2026-09-02T19:36:00"
+  },
+  {
+    "record_id": 86,
+    "student_id": "S0010",
+    "module_code": "CS101",
+    "assessment": "Project",
+    "score": 50,
+    "updated_at": "2026-09-08T11:18:32"
+  },
+  {
+    "record_id": 87,
+    "student_id": "S0008",
+    "module_code": "BA102",
+    "assessment": "Quiz 2",
+    "score": 89,
+    "updated_at": "2026-09-14T19:12:21"
+  },
+  {
+    "record_id": 88,
+    "student_id": "S0014",
+    "module_code": "CS102",
+    "assessment": "Project",
+    "score": 36,
+    "updated_at": "2026-09-19T20:43:27"
+  },
+  {
+    "record_id": 89,
+    "student_id": "S0003",
+    "module_code": "IT101",
+    "assessment": "Lab Test",
+    "score": 57,
+    "updated_at": "2026-09-06T15:14:14"
+  },
+  {
+    "record_id": 90,
+    "student_id": "S0009",
+    "module_code": "DE102",
+    "assessment": "Quiz 2",
+    "score": 74,
+    "updated_at": "2026-09-04T20:05:02"
+  },
+  {
+    "record_id": 91,
+    "student_id": "S0019",
+    "module_code": "IT103",
+    "assessment": "Final Exam",
+    "score": 90,
+    "updated_at": "2026-09-15T23:53:58"
+  },
+  {
+    "record_id": 92,
+    "student_id": "S0006",
+    "module_code": "CS103",
+    "assessment": "Lab Test",
+    "score": 62,
+    "updated_at": "2026-08-27T05:42:38"
+  },
+  {
+    "record_id": 93,
+    "student_id": "S0035",
+    "module_code": "IT101",
+    "assessment": "Lab Test",
+    "score": 75,
+    "updated_at": "2026-09-14T03:48:17"
+  },
+  {
+    "record_id": 94,
+    "student_id": "S0022",
+    "module_code": "CS103",
+    "assessment": "Quiz 2",
+    "score": 69,
+    "updated_at": "2026-09-16T16:33:40"
+  },
+  {
+    "record_id": 95,
+    "student_id": "S0006",
+    "module_code": "CS102",
+    "assessment": "Quiz 2",
+    "score": 63,
+    "updated_at": "2026-09-10T18:15:10"
+  },
+  {
+    "record_id": 96,
+    "student_id": "S0040",
+    "module_code": "DE103",
+    "assessment": "Project",
+    "score": 40,
+    "updated_at": "2026-09-12T10:36:21"
+  },
+  {
+    "record_id": 97,
+    "student_id": "S0019",
+    "module_code": "IT103",
+    "assessment": "Quiz 1",
+    "score": 70,
+    "updated_at": "2026-09-03T04:57:01"
+  },
+  {
+    "record_id": 98,
+    "student_id": "S0022",
+    "module_code": "CS103",
+    "assessment": "Project",
+    "score": 100,
+    "updated_at": "2026-09-04T19:16:37"
+  },
+  {
+    "record_id": 99,
+    "student_id": "S0021",
+    "module_code": "DE102",
+    "assessment": "Quiz 1",
+    "score": 70,
+    "updated_at": "2026-09-19T23:09:01"
+  },
+  {
+    "record_id": 100,
+    "student_id": "S0004",
+    "module_code": "BA103",
+    "assessment": "Quiz 2",
+    "score": 76,
+    "updated_at": "2026-08-28T17:36:17"
+  },
+  {
+    "record_id": 101,
+    "student_id": "S0021",
+    "module_code": "DE102",
+    "assessment": "Final Exam",
+    "score": 69,
+    "updated_at": "2026-09-25T02:14:33"
+  },
+  {
+    "record_id": 102,
+    "student_id": "S0019",
+    "module_code": "IT102",
+    "assessment": "Project",
+    "score": 70,
+    "updated_at": "2026-09-03T10:17:20"
+  },
+  {
+    "record_id": 103,
+    "student_id": "S0034",
+    "module_code": "CS103",
+    "assessment": "Final Exam",
+    "score": 51,
+    "updated_at": "2026-09-12T20:12:46"
+  },
+  {
+    "record_id": 104,
+    "student_id": "S0018",
+    "module_code": "CS102",
+    "assessment": "Quiz 2",
+    "score": 85,
+    "updated_at": "2026-09-21T05:49:57"
+  },
+  {
+    "record_id": 105,
+    "student_id": "S0040",
+    "module_code": "DE103",
+    "assessment": "Final Exam",
+    "score": 35,
+    "updated_at": "2026-08-29T14:33:17"
+  },
+  {
+    "record_id": 106,
+    "student_id": "S0001",
+    "module_code": "DE101",
+    "assessment": "Quiz 1",
+    "score": 40,
+    "updated_at": "2026-09-10T12:45:43"
+  },
+  {
+    "record_id": 107,
+    "student_id": "S0009",
+    "module_code": "DE101",
+    "assessment": "Project",
+    "score": 41,
+    "updated_at": "2026-09-24T21:23:43"
+  },
+  {
+    "record_id": 108,
+    "student_id": "S0038",
+    "module_code": "CS102",
+    "assessment": "Quiz 1",
+    "score": 60,
+    "updated_at": "2026-08-27T21:30:45"
+  },
+  {
+    "record_id": 109,
+    "student_id": "S0010",
+    "module_code": "CS102",
+    "assessment": "Quiz 2",
+    "score": 39,
+    "updated_at": "2026-09-07T14:59:44"
+  },
+  {
+    "record_id": 110,
+    "student_id": "S0029",
+    "module_code": "DE101",
+    "assessment": "Quiz 1",
+    "score": 74,
+    "updated_at": "2026-08-31T06:01:55"
+  },
+  {
+    "record_id": 111,
+    "student_id": "S0033",
+    "module_code": "DE103",
+    "assessment": "Final Exam",
+    "score": 47,
+    "updated_at": "2026-09-05T08:04:18"
+  },
+  {
+    "record_id": 112,
+    "student_id": "S0026",
+    "module_code": "CS101",
+    "assessment": "Lab Test",
+    "score": 86,
+    "updated_at": "2026-09-14T04:22:00"
+  },
+  {
+    "record_id": 113,
+    "student_id": "S0023",
+    "module_code": "IT101",
+    "assessment": "Quiz 1",
+    "score": 58,
+    "updated_at": "2026-09-24T08:51:45"
+  },
+  {
+    "record_id": 114,
+    "student_id": "S0016",
+    "module_code": "BA103",
+    "assessment": "Quiz 1",
+    "score": 41,
+    "updated_at": "2026-09-10T22:10:12"
+  },
+  {
+    "record_id": 115,
+    "student_id": "S0001",
+    "module_code": "DE103",
+    "assessment": "Quiz 1",
+    "score": 35,
+    "updated_at": "2026-09-10T17:34:53"
+  },
+  {
+    "record_id": 116,
+    "student_id": "S0011",
+    "module_code": "IT102",
+    "assessment": "Project",
+    "score": 46,
+    "updated_at": "2026-09-04T20:00:09"
+  },
+  {
+    "record_id": 117,
+    "student_id": "S0032",
+    "module_code": "BA102",
+    "assessment": "Lab Test",
+    "score": 57,
+    "updated_at": "2026-08-28T00:45:45"
+  },
+  {
+    "record_id": 118,
+    "student_id": "S0016",
+    "module_code": "BA101",
+    "assessment": "Quiz 2",
+    "score": 88,
+    "updated_at": "2026-09-04T08:54:05"
+  },
+  {
+    "record_id": 119,
+    "student_id": "S0003",
+    "module_code": "IT103",
+    "assessment": "Quiz 2",
+    "score": 92,
+    "updated_at": "2026-09-02T17:08:36"
+  },
+  {
+    "record_id": 120,
+    "student_id": "S0002",
+    "module_code": "CS103",
+    "assessment": "Final Exam",
+    "score": 57,
+    "updated_at": "2026-08-28T08:55:24"
+  },
+  {
+    "record_id": 121,
+    "student_id": "S0040",
+    "module_code": "DE101",
+    "assessment": "Final Exam",
+    "score": 100,
+    "updated_at": "2026-09-22T11:18:29"
+  },
+  {
+    "record_id": 122,
+    "student_id": "S0013",
+    "module_code": "DE102",
+    "assessment": "Quiz 1",
+    "score": 51,
+    "updated_at": "2026-09-02T02:58:50"
+  },
+  {
+    "record_id": 123,
+    "student_id": "S0007",
+    "module_code": "IT101",
+    "assessment": "Quiz 1",
+    "score": 82,
+    "updated_at": "2026-08-29T15:49:31"
+  },
+  {
+    "record_id": 124,
+    "student_id": "S0008",
+    "module_code": "BA101",
+    "assessment": "Lab Test",
+    "score": 97,
+    "updated_at": "2026-09-24T15:01:33"
+  },
+  {
+    "record_id": 125,
+    "student_id": "S0026",
+    "module_code": "CS103",
+    "assessment": "Lab Test",
+    "score": 68,
+    "updated_at": "2026-08-30T07:09:18"
+  },
+  {
+    "record_id": 126,
+    "student_id": "S0021",
+    "module_code": "DE102",
+    "assessment": "Project",
+    "score": 64,
+    "updated_at": "2026-09-09T17:46:59"
+  },
+  {
+    "record_id": 127,
+    "student_id": "S0007",
+    "module_code": "IT103",
+    "assessment": "Project",
+    "score": 53,
+    "updated_at": "2026-09-10T09:10:28"
+  },
+  {
+    "record_id": 128,
+    "student_id": "S0038",
+    "module_code": "CS102",
+    "assessment": "Lab Test",
+    "score": 46,
+    "updated_at": "2026-09-19T01:03:38"
+  },
+  {
+    "record_id": 129,
+    "student_id": "S0018",
+    "module_code": "CS102",
+    "assessment": "Quiz 2",
+    "score": 83,
+    "updated_at": "2026-09-12T20:34:45"
+  },
+  {
+    "record_id": 130,
+    "student_id": "S0015",
+    "module_code": "IT101",
+    "assessment": "Project",
+    "score": 54,
+    "updated_at": "2026-08-31T15:44:26"
+  },
+  {
+    "record_id": 131,
+    "student_id": "S0011",
+    "module_code": "IT103",
+    "assessment": "Final Exam",
+    "score": 57,
+    "updated_at": "2026-09-25T00:43:04"
+  },
+  {
+    "record_id": 132,
+    "student_id": "S0034",
+    "module_code": "CS103",
+    "assessment": "Lab Test",
+    "score": 54,
+    "updated_at": "2026-09-18T05:41:35"
+  },
+  {
+    "record_id": 133,
+    "student_id": "S0002",
+    "module_code": "CS101",
+    "assessment": "Quiz 2",
+    "score": 86,
+    "updated_at": "2026-09-17T19:55:51"
+  },
+  {
+    "record_id": 134,
+    "student_id": "S0034",
+    "module_code": "CS102",
+    "assessment": "Quiz 1",
+    "score": 81,
+    "updated_at": "2026-09-23T14:31:44"
+  },
+  {
+    "record_id": 135,
+    "student_id": "S0025",
+    "module_code": "DE101",
+    "assessment": "Final Exam",
+    "score": 92,
+    "updated_at": "2026-09-25T05:12:12"
+  },
+  {
+    "record_id": 136,
+    "student_id": "S0020",
+    "module_code": "BA102",
+    "assessment": "Quiz 1",
+    "score": 94,
+    "updated_at": "2026-08-30T17:33:10"
+  },
+  {
+    "record_id": 137,
+    "student_id": "S0999",
+    "module_code": "BA101",
+    "assessment": "Quiz 2",
+    "score": 53,
+    "updated_at": "2026-09-09T02:28:12"
+  },
+  {
+    "record_id": 138,
+    "student_id": "S0012",
+    "module_code": "BA103",
+    "assessment": "Project",
+    "score": 59,
+    "updated_at": "2026-09-02T21:41:58"
+  },
+  {
+    "record_id": 139,
+    "student_id": "S0034",
+    "module_code": "CS102",
+    "assessment": "Project",
+    "score": 39,
+    "updated_at": "2026-08-31T22:13:27"
+  },
+  {
+    "record_id": 140,
+    "student_id": "S0009",
+    "module_code": "DE102",
+    "assessment": "Quiz 1",
+    "score": 57,
+    "updated_at": "2026-09-21T04:42:01"
+  },
+  {
+    "record_id": 141,
+    "student_id": "S0013",
+    "module_code": "DE101",
+    "assessment": "Project",
+    "score": 42,
+    "updated_at": "2026-09-03T14:41:12"
+  },
+  {
+    "record_id": 142,
+    "student_id": "S0003",
+    "module_code": "IT101",
+    "assessment": "Quiz 2",
+    "score": 62,
+    "updated_at": "2026-08-30T08:32:57"
+  },
+  {
+    "record_id": 143,
+    "student_id": "S0026",
+    "module_code": "CS101",
+    "assessment": "Final Exam",
+    "score": 77,
+    "updated_at": "2026-09-15T19:37:28"
+  },
+  {
+    "record_id": 144,
+    "student_id": "S0017",
+    "module_code": "DE101",
+    "assessment": "Project",
+    "score": 72,
+    "updated_at": "2026-09-06T13:17:23"
+  },
+  {
+    "record_id": 145,
+    "student_id": "S0021",
+    "module_code": "DE102",
+    "assessment": "Quiz 1",
+    "score": 60,
+    "updated_at": "2026-09-08T04:20:15"
+  },
+  {
+    "record_id": 146,
+    "student_id": "S0008",
+    "module_code": "BA101",
+    "assessment": "Project",
+    "score": 59,
+    "updated_at": "2026-09-02T05:29:54"
+  },
+  {
+    "record_id": 147,
+    "student_id": "S0005",
+    "module_code": "DE101",
+    "assessment": "Quiz 1",
+    "score": 50,
+    "updated_at": "2026-09-17T13:02:35"
+  },
+  {
+    "record_id": 148,
+    "student_id": "S0018",
+    "module_code": "CS101",
+    "assessment": "Lab Test",
+    "score": 44,
+    "updated_at": "2026-09-05T11:17:53"
+  },
+  {
+    "record_id": 149,
+    "student_id": "S0022",
+    "module_code": "CS101",
+    "assessment": "Quiz 1",
+    "score": 87,
+    "updated_at": "2026-08-30T06:36:09"
+  },
+  {
+    "record_id": 150,
+    "student_id": "S0002",
+    "module_code": "CS102",
+    "assessment": "Lab Test",
+    "score": 62,
+    "updated_at": "2026-09-20T11:48:19"
+  },
+  {
+    "record_id": 151,
+    "student_id": "S0025",
+    "module_code": "DE101",
+    "assessment": "Quiz 2",
+    "score": 38,
+    "updated_at": "2026-09-18T17:26:06"
+  },
+  {
+    "record_id": 152,
+    "student_id": "S0012",
+    "module_code": "BA102",
+    "assessment": "Quiz 2",
+    "score": 48,
+    "updated_at": "2026-09-08T12:59:30"
+  },
+  {
+    "record_id": 153,
+    "student_id": "S0011",
+    "module_code": "IT102",
+    "assessment": "Quiz 1",
+    "score": 45,
+    "updated_at": "2026-09-12T12:35:51"
+  },
+  {
+    "record_id": 154,
+    "student_id": "S0035",
+    "module_code": "IT102",
+    "assessment": "Quiz 1",
+    "score": 100,
+    "updated_at": "2026-09-15T11:52:17"
+  },
+  {
+    "record_id": 155,
+    "student_id": "S0019",
+    "module_code": "IT101",
+    "assessment": "Final Exam",
+    "score": 52,
+    "updated_at": "2026-09-15T08:30:03"
+  },
+  {
+    "record_id": 156,
+    "student_id": "S0033",
+    "module_code": "DE102",
+    "assessment": "Quiz 2",
+    "score": 82,
+    "updated_at": "2026-09-19T08:07:00"
+  },
+  {
+    "record_id": 157,
+    "student_id": "S0008",
+    "module_code": "BA103",
+    "assessment": "Quiz 2",
+    "score": 57,
+    "updated_at": "2026-09-15T06:13:39"
+  },
+  {
+    "record_id": 158,
+    "student_id": "S0034",
+    "module_code": "CS101",
+    "assessment": "Quiz 2",
+    "score": 97,
+    "updated_at": "2026-08-30T21:47:46"
+  },
+  {
+    "record_id": 159,
+    "student_id": "S0030",
+    "module_code": "CS103",
+    "assessment": "Quiz 1",
+    "score": 72,
+    "updated_at": "2026-09-25T04:05:50"
+  },
+  {
+    "record_id": 160,
+    "student_id": "S0024",
+    "module_code": "BA102",
+    "assessment": "Lab Test",
+    "score": 84,
+    "updated_at": "2026-08-31T12:36:35"
+  },
+  {
+    "record_id": 161,
+    "student_id": "S0021",
+    "module_code": "DE102",
+    "assessment": "Lab Test",
+    "score": 52,
+    "updated_at": "2026-09-04T00:54:54"
+  },
+  {
+    "record_id": 162,
+    "student_id": "S0028",
+    "module_code": "BA102",
+    "assessment": "Quiz 2",
+    "score": 97,
+    "updated_at": "2026-09-10T16:19:41"
+  },
+  {
+    "record_id": 163,
+    "student_id": "S0017",
+    "module_code": "DE101",
+    "assessment": "Project",
+    "score": 86,
+    "updated_at": "2026-09-23T19:58:31"
+  },
+  {
+    "record_id": 164,
+    "student_id": "S0018",
+    "module_code": "CS101",
+    "assessment": "Quiz 1",
+    "score": 63,
+    "updated_at": "2026-08-26T23:35:40"
+  },
+  {
+    "record_id": 165,
+    "student_id": "S0015",
+    "module_code": "IT102",
+    "assessment": "Lab Test",
+    "score": 78,
+    "updated_at": "2026-09-24T17:20:25"
+  },
+  {
+    "record_id": 166,
+    "student_id": "S0019",
+    "module_code": "IT101",
+    "assessment": "Lab Test",
+    "score": 93,
+    "updated_at": "2026-09-25T05:28:50"
+  },
+  {
+    "record_id": 167,
+    "student_id": "S0037",
+    "module_code": "DE102",
+    "assessment": "Lab Test",
+    "score": 89,
+    "updated_at": "2026-09-12T21:18:34"
+  },
+  {
+    "record_id": 168,
+    "student_id": "S0015",
+    "module_code": "IT101",
+    "assessment": "Final Exam",
+    "score": 94,
+    "updated_at": "2026-08-27T13:04:49"
+  },
+  {
+    "record_id": 169,
+    "student_id": "S0011",
+    "module_code": "IT103",
+    "assessment": "Project",
+    "score": 48,
+    "updated_at": "2026-09-25T06:10:02"
+  },
+  {
+    "record_id": 170,
+    "student_id": "S0040",
+    "module_code": "DE101",
+    "assessment": "Lab Test",
+    "score": 67,
+    "updated_at": "2026-09-11T20:24:02"
+  },
+  {
+    "record_id": 171,
+    "student_id": "S0026",
+    "module_code": "CS101",
+    "assessment": "Quiz 1",
+    "score": 66,
+    "updated_at": "2026-09-03T10:33:35"
+  },
+  {
+    "record_id": 172,
+    "student_id": "S0012",
+    "module_code": "BA102",
+    "assessment": "Project",
+    "score": 66,
+    "updated_at": "2026-09-19T13:28:57"
+  },
+  {
+    "record_id": 173,
+    "student_id": "S0027",
+    "module_code": "IT102",
+    "assessment": "Project",
+    "score": 78,
+    "updated_at": "2026-09-06T21:08:03"
+  },
+  {
+    "record_id": 174,
+    "student_id": "S0033",
+    "module_code": "DE101",
+    "assessment": "Lab Test",
+    "score": 45,
+    "updated_at": "2026-09-05T21:25:46"
+  },
+  {
+    "record_id": 175,
+    "student_id": "S0020",
+    "module_code": "BA103",
+    "assessment": "Project",
+    "score": 57,
+    "updated_at": "2026-09-23T14:10:40"
+  },
+  {
+    "record_id": 176,
+    "student_id": "S0016",
+    "module_code": "BA101",
+    "assessment": "Quiz 2",
+    "score": 58,
+    "updated_at": "2026-09-24T02:30:53"
+  },
+  {
+    "record_id": 177,
+    "student_id": "S0038",
+    "module_code": "CS101",
+    "assessment": "Project",
+    "score": 77,
+    "updated_at": "2026-09-13T16:44:01"
+  },
+  {
+    "record_id": 178,
+    "student_id": "S0040",
+    "module_code": "DE102",
+    "assessment": "Quiz 1",
+    "score": 35,
+    "updated_at": "2026-09-24T11:45:42"
+  },
+  {
+    "record_id": 179,
+    "student_id": "S0037",
+    "module_code": "DE101",
+    "assessment": "Project",
+    "score": 37,
+    "updated_at": "2026-09-24T07:41:20"
+  },
+  {
+    "record_id": 180,
+    "student_id": "S0012",
+    "module_code": "BA103",
+    "assessment": "Quiz 2",
+    "score": 36,
+    "updated_at": "2026-09-01T19:20:04"
+  },
+  {
+    "record_id": 181,
+    "student_id": "S0002",
+    "module_code": "CS102",
+    "assessment": "Final Exam",
+    "score": 53,
+    "updated_at": "2026-08-26T18:15:22"
+  },
+  {
+    "record_id": 182,
+    "student_id": "S0034",
+    "module_code": "CS103",
+    "assessment": "Quiz 2",
+    "score": 98,
+    "updated_at": "2026-08-31T16:15:53"
+  },
+  {
+    "record_id": 183,
+    "student_id": "S0010",
+    "module_code": "CS102",
+    "assessment": "Quiz 2",
+    "score": 70,
+    "updated_at": "2026-09-12T19:35:16"
+  },
+  {
+    "record_id": 184,
+    "student_id": "S0014",
+    "module_code": "CS102",
+    "assessment": "Project",
+    "score": 69,
+    "updated_at": "2026-09-05T02:49:37"
+  },
+  {
+    "record_id": 185,
+    "student_id": "S0025",
+    "module_code": "DE102",
+    "assessment": "Quiz 2",
+    "score": 61,
+    "updated_at": "2026-09-20T06:19:37"
+  },
+  {
+    "record_id": 186,
+    "student_id": "S0028",
+    "module_code": "BA101",
+    "assessment": "Project",
+    "score": 92,
+    "updated_at": "2026-08-27T19:25:18"
+  },
+  {
+    "record_id": 187,
+    "student_id": "S0011",
+    "module_code": "IT102",
+    "assessment": "Quiz 1",
+    "score": 82,
+    "updated_at": "2026-09-15T06:31:26"
+  },
+  {
+    "record_id": 188,
+    "student_id": "S0019",
+    "module_code": "IT103",
+    "assessment": "Final Exam",
+    "score": 85,
+    "updated_at": "2026-09-04T10:16:38"
+  },
+  {
+    "record_id": 189,
+    "student_id": "S0009",
+    "module_code": "DE101",
+    "assessment": "Quiz 2",
+    "score": 43,
+    "updated_at": "2026-08-30T22:25:39"
+  },
+  {
+    "record_id": 190,
+    "student_id": "S0038",
+    "module_code": "CS103",
+    "assessment": "Quiz 2",
+    "score": 62,
+    "updated_at": "2026-09-17T13:54:27"
+  },
+  {
+    "record_id": 191,
+    "student_id": "S0005",
+    "module_code": "DE102",
+    "assessment": "Project",
+    "score": 100,
+    "updated_at": "2026-09-05T12:30:09"
+  },
+  {
+    "record_id": 192,
+    "student_id": "S0038",
+    "module_code": "CS101",
+    "assessment": "Project",
+    "score": 46,
+    "updated_at": "2026-09-15T01:38:41"
+  },
+  {
+    "record_id": 193,
+    "student_id": "S0034",
+    "module_code": "CS101",
+    "assessment": "Quiz 2",
+    "score": 69,
+    "updated_at": "2026-09-02T00:27:44"
+  },
+  {
+    "record_id": 194,
+    "student_id": "S0006",
+    "module_code": "CS102",
+    "assessment": "Quiz 2",
+    "score": 82,
+    "updated_at": "2026-09-18T11:53:53"
+  },
+  {
+    "record_id": 195,
+    "student_id": "S0040",
+    "module_code": "DE101",
+    "assessment": "Project",
+    "score": 72,
+    "updated_at": "2026-09-17T10:39:40"
+  },
+  {
+    "record_id": 196,
+    "student_id": "S0022",
+    "module_code": "CS103",
+    "assessment": "Project",
+    "score": 99,
+    "updated_at": "2026-09-16T13:20:10"
+  },
+  {
+    "record_id": 197,
+    "student_id": "S0031",
+    "module_code": "IT102",
+    "assessment": "Project",
+    "score": 62,
+    "updated_at": "2026-09-11T08:17:27"
+  },
+  {
+    "record_id": 198,
+    "student_id": "S0021",
+    "module_code": "DE102",
+    "assessment": "Quiz 1",
+    "score": 89,
+    "updated_at": "2026-09-13T04:34:53"
+  },
+  {
+    "record_id": 199,
+    "student_id": "S0021",
+    "module_code": "DE101",
+    "assessment": "Quiz 1",
+    "score": 72,
+    "updated_at": "2026-09-07T13:19:22"
+  },
+  {
+    "record_id": 200,
+    "student_id": "S0040",
+    "module_code": "DE103",
+    "assessment": "Quiz 1",
+    "score": 90,
+    "updated_at": "2026-09-08T05:37:24"
+  }
+]

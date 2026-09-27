@@ -1,0 +1,15 @@
+# Lint settings for "ruff check ."
+line-length = 110
+
+# day1/ai_sample.py is deliberately flawed (it is the Day 1 review exercise).
+extend-exclude = ["day1/ai_sample.py"]
+
+[lint]
+select = ["E", "F", "W", "I"]
+
+[lint.per-file-ignores]
+# Starter files import things participants will use once they finish the TODOs.
+"lab*/starter/*.py" = ["F401"]
+
+[lint.isort]
+known-local-folder = ["common", "init_db"]

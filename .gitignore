@@ -1,0 +1,13 @@
+# Local database and logs (rebuilt by make init / the labs)
+warehouse/*.duckdb
+warehouse/*.wal
+logs/
+mock_api/state.json
+data/attendance/*_injected.csv
+.airflow/
+
+# Python
+__pycache__/
+.venv/
+.ruff_cache/
+.pytest_cache/

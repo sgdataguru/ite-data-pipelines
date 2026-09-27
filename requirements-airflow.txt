@@ -1,0 +1,6 @@
+# Airflow lives in its own virtual environment at /opt/airflow-venv,
+# because its dependencies conflict with dbt. Install with the official
+# constraints file (the devcontainer does this for you):
+#   pip install -r requirements-airflow.txt \
+#     --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-3.3.2/constraints-3.12.txt"
+apache-airflow==3.3.2
