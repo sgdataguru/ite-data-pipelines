@@ -16,6 +16,16 @@
 
 ## Day 2
 
+### Which data quality test would you teach first?
+
+
+
+### How would you explain a star schema without technical words?
+
+
+
+### Should students use AI to write dbt models? Under what conditions?
+
 
 
 ## Day 3
