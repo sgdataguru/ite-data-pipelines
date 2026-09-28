@@ -23,8 +23,30 @@ This repository is your workspace for the 3-day data pipelining workshop for ITE
 | `make api` | Starts the mock grades API on port 8000 (log in `logs/api.log`) |
 | `make api-stop` | Stops the mock grades API |
 | `make init` | Creates the warehouse (`warehouse/pipeline.duckdb`) and empty Bronze tables |
+| `make bronze` | Day 2: populates Bronze by running the three Day 1 loaders |
+| `make pii-check` | Day 2: scans Silver/Gold for readable NRIC-shaped values (add `schemas=<list>` to check elsewhere) |
 
 Run the labs from the repository root, for example `python lab1/starter/ingest_files.py`.
+
+## Day 2
+
+Day 2 layers dbt and a small AI enrichment step on top of the Bronze
+tables. Two dbt projects sit side by side:
+
+- `dbt/` - the project you build in.
+- `dbt/reference/` - the completed answers, in a separate project so your
+  model names never clash. Materialises into `ref_silver` / `ref_gold`.
+
+Both projects share the same warehouse (`warehouse/pipeline.duckdb`) and
+the same profile (`ite_pipelines`).
+
+To browse the model catalog and lineage in the browser:
+
+```bash
+cd dbt && dbt docs generate && dbt docs serve --port 8081
+```
+
+The Codespace forwards port 8081 automatically.
 
 ## Folder guide
 
@@ -34,14 +56,19 @@ Run the labs from the repository root, for example `python lab1/starter/ingest_f
 | `scripts/` | Helper scripts behind the `make` commands |
 | `mock_api/` | The mock grades API and its synthetic data |
 | `data/attendance/` | Attendance CSV files you load in Lab 1 |
+| `data/feedback/` | Day 2: student feedback comments for the AI enrichment lab |
 | `data/fixtures/` | Files used by the facilitator's failure scenarios |
 | `sources/` | The student database (SQLite) |
 | `warehouse/` | Your DuckDB warehouse, created by `make init` |
 | `logs/` | Pipeline and API logs |
 | `lab1/` | Lab 1: files and database into Bronze (`starter/` and `solution/`) |
 | `lab2/` | Lab 2: the grades API into Bronze (`starter/` and `solution/`) |
+| `dbt/` | Day 2: your dbt project (Silver and Gold models) |
+| `dbt/reference/` | Day 2: the reference dbt project (facilitator answers) |
+| `enrich/` | Day 2: the AI enrichment lab (redaction, classifier, review sample) |
 | `day1/` | Day 1 exercise: reviewing AI-generated code |
-| `templates/` | Architecture, ingestion map, data contract and AI review templates |
+| `day2/` | Day 2 exercise: the governance audit PDF |
+| `templates/` | Architecture, ingestion map, data contract, AI review and star schema templates |
 | `journal.md` | Your teaching journal |
 
 ## Data and privacy
@@ -64,5 +91,6 @@ All data in this repository is synthetic. Never paste real student data or crede
 
 | Command | What it does |
 |---|---|
-| `make fail scenario=<x>` | Switches on a failure scenario: `a`, `b`, `c`, `e`, `ratelimit`, `auth`, or `off` to restore everything |
+| `make fail scenario=<x>` | Switches on a failure scenario: `a`, `b`, `c`, `dq`, `e`, `ratelimit`, `auth`, or `off` to restore everything |
 | `make reset` | Drops every Bronze table and recreates an empty `bronze.db_students` |
+| `make dbt-reference` | Day 2: builds the reference dbt project (`dbt/reference/`) |

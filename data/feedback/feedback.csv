@@ -1,0 +1,101 @@
+feedback_id,student_id,module_code,submitted_at,comment
+F0001,S0017,BA101,2026-09-06 09:11:57,"Feeling motivated after the Business Analytics Fundamentals class, want to do more"
+F0002,S0006,CS101,2026-09-01 17:29:39,"Feeling motivated after the Cyber Security Fundamentals class, want to do more"
+F0003,S0024,BA101,2026-08-28 07:39:26,Not getting anything from the Business Analytics Fundamentals lectures anymore
+F0004,S0019,BA103,2026-09-07 00:32:04,Not getting anything from the Predictive Analytics lectures anymore
+F0005,S0040,DE103,2026-09-19 21:28:28,"Half the Data Storage and Retrieval session was useful, half was known already"
+F0006,S0020,IT102,2026-09-13 19:12:55,The quiz for Web Applications Development was fair and covered the right stuff. Call me back at +65 8000 0020 if you want
+F0007,S0005,DE102,2026-09-21 18:58:33,I dread every Data Pipelining tutorial now honestly
+F0008,S0018,CS101,2026-09-24 09:02:58,"Not much to say about the Cyber Security Fundamentals class, was standard"
+F0009,S0032,CS102,2026-09-03 20:24:01,"Network Security coursework is way too heavy, cannot cope"
+F0010,S0029,DE101,2026-08-29 18:57:09,The quiz for Data Fundamentals was fair and covered the right stuff
+F0011,S0034,IT102,2026-08-29 05:22:33,"Attended Web Applications Development today, standard class"
+F0012,S0005,DE103,2026-09-10 18:47:01,"Data Storage and Retrieval class today just so-so lah, no strong feeling"
+F0013,S0018,BA102,2026-09-04 19:48:57,The Data Visualisation case study was interesting and relevant
+F0014,S0005,CS101,2026-09-23 12:32:29,Overwhelmed by the Cyber Security Fundamentals assignment volume
+F0015,S0028,IT101,2026-09-05 04:54:16,"Programming Fundamentals demo was excellent, seeing the code run helped a lot"
+F0016,S0015,BA102,2026-09-16 14:28:53,Group work in Data Visualisation today was actually fun for once
+F0017,S0038,IT102,2026-09-12 08:37:49,"Web Applications Development class was chaotic today, hard to follow"
+F0018,S0026,BA102,2026-09-22 19:30:38,The Data Visualisation case study was interesting and relevant
+F0019,S0029,CS103,2026-09-04 11:23:04,"Attended Incident Response today, standard class"
+F0020,S0035,BA102,2026-09-01 16:09:49,"Fine class for Data Visualisation, nothing to write home about"
+F0021,S0010,IT103,2026-09-06 22:05:50,Group work in Mobile Applications Development today was actually fun for once
+F0022,S0026,CS102,2026-09-17 11:19:00,"Network Security lecture was fine i guess, average"
+F0023,S0010,BA101,2026-09-01 11:24:11,"Teacher explain Business Analytics Fundamentals until very blur, cannot catch"
+F0024,S0018,DE103,2026-09-19 12:29:57,"Struggling with Data Storage and Retrieval homework, no support"
+F0025,S0022,DE103,2026-09-18 02:54:59,"Sian ah, the Data Storage and Retrieval assessment hard until want give up"
+F0026,S0024,IT102,2026-08-26 21:27:24,Wah lao Web Applications Development homework buay tahan sia
+F0027,S0029,DE103,2026-09-02 03:23:46,"Data Storage and Retrieval lecture was fine i guess, average"
+F0028,S0025,DE103,2026-09-01 18:51:45,The Data Storage and Retrieval module needs a serious redesign
+F0029,S0033,CS102,2026-08-28 20:11:29,Nothing about Network Security today made sense
+F0030,S0038,DE101,2026-09-01 23:09:32,"Best Data Fundamentals session so far, the pace was just right"
+F0031,S0039,DE102,2026-09-09 00:03:22,"The Data Pipelining recap was ok, hoping the next one is deeper"
+F0032,S0021,DE102,2026-09-05 18:45:38,"Data Pipelining demo was excellent, seeing the code run helped a lot"
+F0033,S0028,BA101,2026-09-07 16:28:59,"Not much to say about the Business Analytics Fundamentals class, was standard"
+F0034,S0024,CS102,2026-09-16 11:30:54,The Network Security case study was interesting and relevant
+F0035,S0027,DE102,2026-08-30 12:02:25,"The Data Pipelining lab was great, learned a lot from the examples"
+F0036,S0035,IT103,2026-09-01 08:51:40,Not sure how i feel about the Mobile Applications Development project yet
+F0037,S0022,CS101,2026-09-06 17:32:48,"Cyber Security Fundamentals lecture was fine i guess, average"
+F0038,S0012,CS102,2026-08-31 13:43:07,"The Network Security lecturer is patient with our questions, thanks"
+F0039,S0030,BA102,2026-09-03 18:30:45,"Please stop the pop quizes in Data Visualisation, so stressful"
+F0040,S0017,DE103,2026-09-16 01:50:05,"Fine class for Data Storage and Retrieval, nothing to write home about"
+F0041,S0027,IT102,2026-09-23 16:58:49,"The Web Applications Development tutorial neither shiok nor sian, just there lor"
+F0042,S0013,BA103,2026-09-22 06:41:13,"The Predictive Analytics class was ok today, nothing special"
+F0043,S0037,BA102,2026-09-17 10:56:29,Data Visualisation exam prep session was very helpfull
+F0044,S0009,IT101,2026-09-15 19:44:42,"The Programming Fundamentals lab was great, learned a lot from the examples"
+F0045,S0021,DE102,2026-09-24 05:30:54,"Data Pipelining demo was excellent, seeing the code run helped a lot"
+F0046,S0021,DE103,2026-09-02 16:18:10,"Sian ah, the Data Storage and Retrieval assessment hard until want give up. Call me back at +65 8000 0021 if you want"
+F0047,S0032,DE102,2026-09-09 08:27:22,"The Data Pipelining recap was ok, hoping the next one is deeper. Btw my name is Wen Jie Yeo"
+F0048,S0020,CS103,2026-08-28 06:19:38,Really appreciated the walkthrough on Incident Response today. Reply to me at jiahui.ng@example.com
+F0049,S0006,BA101,2026-09-07 01:15:30,"Best Business Analytics Fundamentals session so far, the pace was just right. Btw my name is Muhammad Irfan Hassan"
+F0050,S0038,IT101,2026-08-27 01:47:16,Programming Fundamentals is finally making sense after today's tutorial
+F0051,S0014,IT103,2026-09-16 11:27:23,The Mobile Applications Development case study was interesting and relevant
+F0052,S0009,DE102,2026-09-02 08:25:43,"Prof explained Data Pipelining very well, made the topic click"
+F0053,S0018,CS103,2026-09-12 09:40:54,"Best Incident Response session so far, the pace was just right"
+F0054,S0014,CS103,2026-09-19 23:49:24,"Best Incident Response session so far, the pace was just right"
+F0055,S0021,IT101,2026-09-01 12:42:32,The quiz for Programming Fundamentals was fair and covered the right stuff
+F0056,S0033,DE102,2026-09-06 03:06:58,The quiz for Data Pipelining was fair and covered the right stuff. My matric is fine but for the record my nric is T5414659F
+F0057,S0026,DE102,2026-09-10 21:23:58,"Data Pipelining today just passed by, nothing memorable"
+F0058,S0031,BA102,2026-09-03 01:22:53,"The Data Visualisation lecturer is patient with our questions, thanks"
+F0059,S0013,BA103,2026-09-21 07:45:47,"Terrible Predictive Analytics class today, wasted the hour"
+F0060,S0011,CS102,2026-09-19 03:39:47,Network Security project chao ta already lah
+F0061,S0036,DE102,2026-09-20 04:04:58,Not sure how i feel about the Data Pipelining project yet
+F0062,S0015,BA103,2026-09-12 14:44:13,"Song ah the Predictive Analytics tutorial, understand liao"
+F0063,S0017,BA101,2026-09-14 22:24:53,"The pace of Business Analytics Fundamentals was fine, could have been faster"
+F0064,S0003,IT101,2026-09-12 05:13:17,Class today for Programming Fundamentals was engaging start to finish
+F0065,S0012,DE103,2026-09-10 17:49:58,"Wah steady the Data Storage and Retrieval session today, sibei on. Reply to me at farhan.ismail@example.com"
+F0066,S0014,BA102,2026-09-15 11:22:25,"The Data Visualisation lecturer is patient with our questions, thanks"
+F0067,S0013,CS103,2026-09-21 05:26:06,Nothing about Incident Response today made sense. Btw my name is Kavitha Raman
+F0068,S0033,CS101,2026-09-01 00:21:15,"Fine class for Cyber Security Fundamentals, nothing to write home about"
+F0069,S0007,IT102,2026-08-26 19:39:51,Web Applications Development project chao ta already lah
+F0070,S0022,DE102,2026-09-11 13:35:00,"The Data Pipelining lecturer is patient with our questions, thanks"
+F0071,S0005,CS103,2026-09-07 04:38:15,Incident Response last class was a waste of everyones time
+F0072,S0026,BA103,2026-09-02 20:48:31,Predictive Analytics was neither good nor bad this week
+F0073,S0005,BA103,2026-09-18 11:36:52,"Feeling motivated after the Predictive Analytics class, want to do more"
+F0074,S0002,IT103,2026-09-18 19:42:14,The Mobile Applications Development tutorial dragged on with no clear point
+F0075,S0026,CS103,2026-09-21 22:57:47,"Sian ah, the Incident Response assessment hard until want give up"
+F0076,S0025,BA103,2026-09-09 06:37:39,The extra reading for Predictive Analytics was really useful
+F0077,S0035,CS101,2026-08-27 00:46:52,Cyber Security Fundamentals project chao ta already lah
+F0078,S0004,BA103,2026-09-22 03:11:38,Not sure how i feel about the Predictive Analytics project yet. My matric is fine but for the record my nric is S5188447F
+F0079,S0004,IT103,2026-09-18 15:39:39,Mobile Applications Development content was fine but the slides could be better
+F0080,S0035,DE101,2026-08-28 13:50:11,"Feeling motivated after the Data Fundamentals class, want to do more"
+F0081,S0020,DE101,2026-09-10 01:07:00,"Really enjoyed the Data Fundamentals class today, exercises were clear"
+F0082,S0023,BA102,2026-09-14 22:46:24,The Data Visualisation case study was interesting and relevant
+F0083,S0004,BA101,2026-09-03 18:04:54,"Confused after the Business Analytics Fundamentals lecture, examples went too fast"
+F0084,S0005,CS102,2026-09-09 21:22:19,The extra reading for Network Security was really useful
+F0085,S0024,CS103,2026-09-17 01:56:10,"Song ah the Incident Response tutorial, understand liao"
+F0086,S0011,CS101,2026-08-31 10:18:30,Overwhelmed by the Cyber Security Fundamentals assignment volume
+F0087,S0035,DE103,2026-09-23 09:52:36,"Teacher explain Data Storage and Retrieval until very blur, cannot catch"
+F0088,S0011,BA103,2026-09-09 02:22:24,The extra reading for Predictive Analytics was really useful
+F0089,S0017,IT101,2026-08-31 12:48:46,"The Programming Fundamentals lab was great, learned a lot from the examples"
+F0090,S0038,DE103,2026-09-15 01:49:23,"Getting lost in Data Storage and Retrieval content, feels like too much"
+F0091,S0016,DE103,2026-09-15 14:34:35,Group work in Data Storage and Retrieval today was actually fun for once
+F0092,S0001,CS103,2026-09-25 14:31:41,Nothing about Incident Response today made sense
+F0093,S0028,BA102,2026-08-26 19:03:35,"Fine class for Data Visualisation, nothing to write home about"
+F0094,S0009,BA103,2026-09-07 19:18:34,Predictive Analytics exam prep session was very helpfull. My matric is fine but for the record my nric is T6634400H
+F0095,S0021,CS101,2026-09-10 15:15:04,"Cyber Security Fundamentals demo was excellent, seeing the code run helped a lot"
+F0096,S0036,CS101,2026-09-11 23:49:57,Cyber Security Fundamentals project chao ta already lah
+F0097,S0032,CS102,2026-09-08 18:16:13,"The pace of Network Security was fine, could have been faster"
+F0098,S0006,IT101,2026-09-10 05:42:17,"Programming Fundamentals project feedback was constructive, thanks prof"
+F0099,S0024,IT101,2026-08-27 04:46:42,"Programming Fundamentals quiz was unfair, covered stuff we did not do"
+F0100,S0011,IT101,2026-09-21 12:55:48,Programming Fundamentals last class was a waste of everyones time

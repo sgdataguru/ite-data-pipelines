@@ -11,13 +11,16 @@
     "SOURCE_API_TOKEN": "workshop-token-not-a-real-secret",
     "MOCK_API_URL": "http://localhost:8000",
     "PII_SALT": "workshop-salt-not-a-real-secret",
-    "AIRFLOW_HOME": "/workspaces/ite-data-pipelines/.airflow"
+    "AIRFLOW_HOME": "/workspaces/ite-data-pipelines/.airflow",
+    "DBT_PROFILES_DIR": "/workspaces/ite-data-pipelines/dbt",
+    "DUCKDB_PATH": "/workspaces/ite-data-pipelines/warehouse/pipeline.duckdb"
   },
 
-  "forwardPorts": [8000, 8080],
+  "forwardPorts": [8000, 8080, 8081],
   "portsAttributes": {
     "8000": { "label": "Mock grades API" },
-    "8080": { "label": "Airflow UI (Day 3)" }
+    "8080": { "label": "Airflow UI (Day 3)" },
+    "8081": { "label": "dbt docs (Day 2)" }
   },
 
   "postCreateCommand": "pip install -r requirements.txt && sudo mkdir -p /opt/airflow-venv && sudo chown $(id -u):$(id -g) /opt/airflow-venv && python -m venv /opt/airflow-venv &&/opt/airflow-venv/bin/pip install --upgrade pip && /opt/airflow-venv/bin/pip install -r requirements-airflow.txt --constraint https://raw.githubusercontent.com/apache/airflow/constraints-3.3.2/constraints-3.12.txt && make init",

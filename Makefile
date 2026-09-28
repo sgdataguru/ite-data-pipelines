@@ -4,8 +4,9 @@
 PYTHON ?= python
 PID_FILE = logs/api.pid
 scenario ?=
+schemas ?=
 
-.PHONY: check api api-stop fail init reset
+.PHONY: check api api-stop fail init reset bronze dbt-reference pii-check
 
 # Check that tools, data and the mock API are ready
 check:
@@ -44,3 +45,26 @@ init:
 # Facilitator: drop all Bronze tables and start clean
 reset:
 	$(PYTHON) scripts/reset_db.py
+
+# Day 2: populate Bronze by running the three Day 1 solution loaders.
+# Safe to run more than once; makes sure the mock API is up first.
+bronze:
+	@$(MAKE) --no-print-directory api
+	$(PYTHON) lab1/solution/ingest_files.py
+	$(PYTHON) lab1/solution/ingest_database.py
+	$(PYTHON) lab2/solution/ingest_api.py
+
+# Day 2 (facilitator): build the reference dbt project.
+dbt-reference:
+	cd dbt/reference && dbt seed && dbt build
+	@echo "make dbt-reference: seed + build finished (see the PASS/WARN/ERROR line above)"
+
+# Day 2: check no schema (default: silver, gold, ref_silver, ref_gold) holds
+# a readable NRIC-shaped value. Add schemas=<list> to scan somewhere else,
+# e.g.  make pii-check schemas=bronze
+pii-check:
+	@if [ -n "$(schemas)" ]; then \
+		$(PYTHON) scripts/pii_check.py --schemas $(schemas); \
+	else \
+		$(PYTHON) scripts/pii_check.py; \
+	fi
