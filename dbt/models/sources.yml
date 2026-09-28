@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: bronze
+    schema: bronze
+    description: "Raw tables written by the Day 1 ingestion labs."
+    config:
+      loaded_at_field: _ingested_at
+      freshness:
+        warn_after: {count: 24, period: hour}
+        error_after: {count: 48, period: hour}
+    tables:
+      - name: file_attendance
+        description: "Attendance rows loaded from data/attendance/*.csv by lab1/solution/ingest_files.py."
+      # TODO (Block 1): declare the other two Bronze tables here.
+      # - name: db_students
+      # - name: api_grades

@@ -1,0 +1,103 @@
+version: 2
+
+# This file is both the reference project's real test file AND the example
+# participants read in Lab 2. Every test in here has a reason. New tests
+# should follow the same style: name the column, name the rule, comment why
+# the severity was chosen.
+
+models:
+  - name: stg_students
+    description: "One row per student, latest version, PII minimised."
+    columns:
+      - name: student_id
+        description: "Business key from the source system."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: nric_hash
+        description: "SHA-256 hash of the trimmed, upper-cased NRIC with the workshop salt."
+        # Meta tags travel with the column into the dbt catalog, so anyone
+        # browsing the docs can see the sensitivity class without opening
+        # the model.
+        meta:
+          classification: restricted
+          pii: true
+
+      - name: full_name
+        description: "Student's full name, as recorded in ops.students."
+        meta:
+          classification: confidential
+          pii: true
+
+      - name: course_code
+        description: "Course the student is enrolled in."
+        data_tests:
+          # Known issue: student S0040 has course_code 'DE99', which is not
+          # in the courses seed. Recorded in the data contract as an
+          # accepted orphan pending source cleanup; we warn but do not fail.
+          - relationships:
+              arguments:
+                to: ref('courses')
+                field: course_code
+              config:
+                severity: warn
+
+  - name: stg_grades
+    description: "One row per grade record, latest version. No filtering."
+    columns:
+      - name: record_id
+        description: "Business key from the API."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: student_id
+        description: "Student the grade belongs to."
+        data_tests:
+          # Known orphan: record 137 references S0999, who does not exist in
+          # ops.students. We warn but do not fail so the pipeline keeps
+          # running while the source team investigates.
+          - relationships:
+              arguments:
+                to: ref('stg_students')
+                field: student_id
+              config:
+                severity: warn
+
+  - name: stg_attendance
+    description: "One row per student, class date, module. Deduplicated and cleaned."
+    columns:
+      - name: attendance_status
+        description: "PRESENT, ABSENT, LATE or MC."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['PRESENT', 'ABSENT', 'LATE', 'MC']
+
+
+# Unit tests exercise a model against inline sample rows. They run inside
+# `dbt build`, so a rule you rely on can never silently break.
+unit_tests:
+  - name: attendance_keeps_latest_of_duplicates
+    model: stg_attendance
+    given:
+      - input: source('bronze', 'file_attendance')
+        rows:
+          # Two rows for the same student, day and module. The older row
+          # says LATE; the newer row says PRESENT. The newer one must win.
+          # If the ORDER BY in stg_attendance were the other way round
+          # (asc instead of desc), the LATE row would win and this test
+          # would fail — proving the dedup rule.
+          - {student_id: S0001, class_date: 2026-09-07, module_code: DE101, status: LATE, _ingested_at: '2026-09-10 08:00:00'}
+          - {student_id: S0001, class_date: 2026-09-07, module_code: DE101, status: PRESENT, _ingested_at: '2026-09-11 08:00:00'}
+          # A lowercase status: we expect it to be upper-cased in Silver.
+          - {student_id: S0002, class_date: 2026-09-07, module_code: DE101, status: absent, _ingested_at: '2026-09-10 08:00:00'}
+      - input: source('bronze', 'db_students')
+        rows:
+          - {student_id: S0001}
+          - {student_id: S0002}
+    expect:
+      rows:
+        - {student_id: S0001, class_date: 2026-09-07, module_code: DE101, attendance_status: PRESENT}
+        - {student_id: S0002, class_date: 2026-09-07, module_code: DE101, attendance_status: ABSENT}

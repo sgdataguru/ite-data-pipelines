@@ -1,0 +1,22 @@
+name: ite_reference
+version: "1.0.0"
+config-version: 2
+profile: ite_pipelines
+
+# The reference project keeps its models in ./silver and ./gold, not the
+# usual ./models folder, so participants don't have to look at the answers
+# while they build their own project.
+model-paths: ["silver", "gold"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+# With model-paths: ["silver", "gold"] each path is its own root, so the
+# schema and materialisation are set on each model file with a `config`
+# block at the top. That keeps the config next to the SQL it applies to.
+
+seeds:
+  ite_reference:
+    +schema: ref_lookup

@@ -1,0 +1,24 @@
+name: ite_pipelines
+version: "1.0.0"
+config-version: 2
+profile: ite_pipelines
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  ite_pipelines:
+    silver:
+      +schema: silver
+      +materialized: view
+    gold:
+      +schema: gold
+      +materialized: table
+
+seeds:
+  ite_pipelines:
+    +schema: lookup

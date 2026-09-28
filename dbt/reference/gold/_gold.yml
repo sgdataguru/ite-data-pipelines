@@ -1,0 +1,86 @@
+version: 2
+
+# Gold-layer tests. Severity defaults to error: a Gold model that fails one
+# of these tests is a real problem, not a data-quality warning.
+
+models:
+  - name: dim_student
+    description: "One row per student, current values."
+    columns:
+      - name: student_id
+        description: "Primary key."
+        data_tests:
+          - unique
+          - not_null
+      - name: nric_hash
+        description: "Hashed NRIC. Never readable."
+      - name: full_name
+        description: "Student's full name."
+      - name: course_code
+        description: "Enrolled course code."
+      - name: course_name
+        description: "Enrolled course name; NULL for DE99."
+      - name: enrolment_date
+        description: "Date the student first enrolled."
+
+  - name: dim_module
+    description: "One row per module."
+    columns:
+      - name: module_code
+        description: "Primary key."
+        data_tests:
+          - unique
+          - not_null
+      - name: module_name
+        description: "Human-readable module name."
+
+  - name: dim_date
+    description: "One row per calendar day covered by attendance."
+    columns:
+      - name: date_day
+        description: "Primary key."
+        data_tests:
+          - unique
+          - not_null
+      - name: day_name
+        description: "Long weekday name."
+      - name: iso_week
+        description: "ISO week number."
+      - name: week_start
+        description: "Monday of the week containing this day."
+      - name: is_weekend
+        description: "True for Saturday and Sunday."
+
+  - name: fct_attendance
+    description: "One row per student per module per class date."
+    columns:
+      - name: attendance_key
+        description: "Business key: student_id | module_code | class_date."
+        data_tests:
+          - unique
+          - not_null
+      - name: student_id
+        description: "Foreign key to dim_student."
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_student')
+                field: student_id
+      - name: module_code
+        description: "Foreign key to dim_module."
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_module')
+                field: module_code
+      - name: class_date
+        description: "Foreign key to dim_date."
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('dim_date')
+                field: date_day
+      - name: attendance_status
+        description: "PRESENT, ABSENT, LATE or MC."
+      - name: is_present
+        description: "1 if PRESENT or LATE, else 0."
