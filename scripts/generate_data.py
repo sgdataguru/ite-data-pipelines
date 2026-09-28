@@ -280,13 +280,233 @@ def write_grades(rng, students):
     path.write_text(json.dumps(records, indent=2) + "\n")
 
 
+# ---------------------------------------------------------------------------
+# Feedback comments (Day 2 - AI enrichment lab)
+# ---------------------------------------------------------------------------
+
+# Template libraries. Each template mentions {module_name} so the same
+# sentence works for any module. Standard-English templates read like a
+# polytechnic student typing quickly; Singlish templates use natural
+# Singapore English particles.
+
+POSITIVE_STD = [
+    "Really enjoyed the {module_name} class today, exercises were clear",
+    "The {module_name} lab was great, learned a lot from the examples",
+    "Prof explained {module_name} very well, made the topic click",
+    "Best {module_name} session so far, the pace was just right",
+    "Loved the {module_name} project brief, super interesting problem",
+    "{module_name} is finally making sense after today's tutorial",
+    "The quiz for {module_name} was fair and covered the right stuff",
+    "{module_name} homework was tough but rewarding, will remember this",
+    "Group work in {module_name} today was actually fun for once",
+    "The {module_name} lecturer is patient with our questions, thanks",
+    "{module_name} demo was excellent, seeing the code run helped a lot",
+    "Feeling motivated after the {module_name} class, want to do more",
+    "The extra reading for {module_name} was really useful",
+    "Class today for {module_name} was engaging start to finish",
+    "{module_name} exam prep session was very helpfull",
+    "Really appreciated the walkthrough on {module_name} today",
+    "The {module_name} case study was interesting and relevant",
+    "Enjoyed the {module_name} discussion, everyone contributed",
+    "{module_name} project feedback was constructive, thanks prof",
+    "Feels good to finally understand {module_name}",
+]
+
+NEUTRAL_STD = [
+    "The {module_name} class was ok today, nothing special",
+    "{module_name} lecture was fine i guess, average",
+    "Just another {module_name} tutorial, no complaints",
+    "{module_name} lab today was so-so, some parts clear some not",
+    "The pace of {module_name} was fine, could have been faster",
+    "{module_name} content was fine but the slides could be better",
+    "Attended {module_name} today, standard class",
+    "Not sure how i feel about the {module_name} project yet",
+    "The {module_name} recap was ok, hoping the next one is deeper",
+    "{module_name} was fine today, felt neutral about it",
+    "Half the {module_name} session was useful, half was known already",
+    "Not much to say about the {module_name} class, was standard",
+    "{module_name} today just passed by, nothing memorable",
+    "{module_name} was neither good nor bad this week",
+    "Fine class for {module_name}, nothing to write home about",
+]
+
+NEGATIVE_STD = [
+    "The {module_name} project deadline is way too tight, super stressed",
+    "Confused after the {module_name} lecture, examples went too fast",
+    "{module_name} lab was frustrating, instructions unclear",
+    "Boring {module_name} session, no examples at all",
+    "Please make the {module_name} exercises less hard, its exhausting",
+    "Getting lost in {module_name} content, feels like too much",
+    "{module_name} quiz was unfair, covered stuff we did not do",
+    "Terrible {module_name} class today, wasted the hour",
+    "Overwhelmed by the {module_name} assignment volume",
+    "The {module_name} tutorial dragged on with no clear point",
+    "Struggling with {module_name} homework, no support",
+    "{module_name} class was chaotic today, hard to follow",
+    "Hate the way {module_name} is being taught this semester",
+    "Not getting anything from the {module_name} lectures anymore",
+    "{module_name} coursework is way too heavy, cannot cope",
+    "Please stop the pop quizes in {module_name}, so stressful",
+    "The {module_name} module needs a serious redesign",
+    "{module_name} last class was a waste of everyones time",
+    "Nothing about {module_name} today made sense",
+    "I dread every {module_name} tutorial now honestly",
+]
+
+# Singlish comments. Deliberately colloquial - kept respectful. The stub
+# classifier in enrich/ai_client.py will get many of these wrong on purpose,
+# so participants see the fairness point without contrived numbers.
+POSITIVE_SG = [
+    "The {module_name} lab damn shiok lah, atas siol!",
+    "Wah steady the {module_name} session today, sibei on",
+    "{module_name} teacher damn on lah, super power",
+    "Song ah the {module_name} tutorial, understand liao",
+    "Very shiok the {module_name} practical, best one so far",
+]
+
+NEUTRAL_SG = [
+    "{module_name} class today just so-so lah, no strong feeling",
+    "Aiya {module_name} lecture ok only, nothing to shout about",
+    "The {module_name} tutorial neither shiok nor sian, just there lor",
+    "Class today for {module_name} passed like that lah, standard",
+]
+
+NEGATIVE_SG = [
+    "Sian ah, the {module_name} assessment hard until want give up",
+    "Teacher explain {module_name} until very blur, cannot catch",
+    "{module_name} project chao ta already lah",
+    "Wah lao {module_name} homework buay tahan sia",
+    "{module_name} class jialat sibei, everyone also confuse",
+    "Aiyoh the {module_name} pace too fast for me",
+]
+
+FEEDBACK_ROWS = 100      # total feedback rows
+PII_ROWS = 10            # rows in which we inject a personal-data value
+SINGLISH_ROWS = 15       # rows written in Singlish
+
+
+# Module name lookup - kept aligned with seeds/modules.csv by hand.
+MODULE_NAMES = {
+    "DE101": "Data Fundamentals", "DE102": "Data Pipelining",
+    "DE103": "Data Storage and Retrieval",
+    "CS101": "Cyber Security Fundamentals", "CS102": "Network Security",
+    "CS103": "Incident Response",
+    "IT101": "Programming Fundamentals",
+    "IT102": "Web Applications Development",
+    "IT103": "Mobile Applications Development",
+    "BA101": "Business Analytics Fundamentals",
+    "BA102": "Data Visualisation", "BA103": "Predictive Analytics",
+}
+
+
+def module_lookup(rng, module_codes):
+    """Pick a module code and its human name (from the seed list)."""
+    code = rng.choice(module_codes)
+    return code, MODULE_NAMES[code]
+
+
+def build_feedback(rng, students):
+    """Build (rows, labels) where rows is written to the repo and labels stays
+    in the facilitator notes."""
+    module_codes = sorted({m for mods in MODULES.values() for m in mods})
+
+    # Compose a plan: which slots are Singlish, which sentiment for each.
+    # Rough distribution: 45 positive, 25 neutral, 30 negative.
+    plan = (
+        [("standard", "positive")] * (45 - 3)
+        + [("standard", "neutral")] * (25 - 2)
+        + [("standard", "negative")] * (30 - 10)
+        + [("singlish", "positive")] * 3
+        + [("singlish", "neutral")] * 2
+        + [("singlish", "negative")] * 10
+    )
+    assert len(plan) == FEEDBACK_ROWS
+    rng.shuffle(plan)
+
+    # Choose which slot indices carry personal data. Pick evenly across
+    # the four PII kinds (name, NRIC, phone, email).
+    pii_slots = rng.sample(range(FEEDBACK_ROWS), PII_ROWS)
+    pii_kinds = ["name", "nric", "phone", "email"] * 3  # >= 10
+    rng.shuffle(pii_kinds)
+    pii_kinds = pii_kinds[:PII_ROWS]
+
+    library = {
+        ("standard", "positive"): POSITIVE_STD,
+        ("standard", "neutral"): NEUTRAL_STD,
+        ("standard", "negative"): NEGATIVE_STD,
+        ("singlish", "positive"): POSITIVE_SG,
+        ("singlish", "neutral"): NEUTRAL_SG,
+        ("singlish", "negative"): NEGATIVE_SG,
+    }
+
+    rows, labels = [], []
+    for idx, (group, sentiment) in enumerate(plan):
+        student = rng.choice(students)
+        module_code, module_name = module_lookup(rng, module_codes)
+        template = rng.choice(library[(group, sentiment)])
+        comment = template.format(module_name=module_name)
+
+        # Injection: append a sentence that carries the personal detail.
+        if idx in pii_slots:
+            slot_position = pii_slots.index(idx)
+            kind = pii_kinds[slot_position]
+            if kind == "name":
+                comment += f". Btw my name is {student['full_name']}"
+            elif kind == "nric":
+                comment += f". My matric is fine but for the record my nric is {student['nric']}"
+            elif kind == "phone":
+                comment += f". Call me back at {student['mobile']} if you want"
+            elif kind == "email":
+                comment += f". Reply to me at {student['email']}"
+
+        submitted_at = random_time_in_last_30_days(rng).isoformat(sep=" ", timespec="seconds")
+        feedback_id = f"F{idx + 1:04d}"
+
+        rows.append({
+            "feedback_id": feedback_id,
+            "student_id": student["student_id"],
+            "module_code": module_code,
+            "submitted_at": submitted_at,
+            "comment": comment,
+        })
+        labels.append({
+            "feedback_id": feedback_id,
+            "true_label": sentiment,
+            "group": group,
+        })
+    return rows, labels
+
+
+def write_feedback(rows, labels):
+    """Feedback data goes in the repository; labels go in the facilitator notes."""
+    csv_path = ROOT / "data" / "feedback" / "feedback.csv"
+    csv_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(csv_path, "w", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
+        writer.writeheader()
+        writer.writerows(rows)
+
+    # Facilitator-only. This folder sits BESIDE the repository, not inside
+    # it, so a student who clones the repo never gets the answer key.
+    labels_dir = ROOT.parent / "ite-facilitator-notes"
+    labels_dir.mkdir(parents=True, exist_ok=True)
+    labels_path = labels_dir / "feedback_labels.csv"
+    with open(labels_path, "w", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=list(labels[0].keys()))
+        writer.writeheader()
+        writer.writerows(labels)
+
+
 def main():
     rng = random.Random(SEED)
     students = build_students(rng)
     write_student_db(students)
     write_attendance(rng, students)
     write_grades(rng, students)
-    print("Synthetic data written to sources/, data/ and mock_api/grades_seed.json")
+    feedback_rows, feedback_labels = build_feedback(rng, students)
+    write_feedback(feedback_rows, feedback_labels)
+    print("Synthetic data written to sources/, data/, mock_api/grades_seed.json "
+          "and data/feedback/feedback.csv (labels in ../ite-facilitator-notes/)")
 
 
 if __name__ == "__main__":
