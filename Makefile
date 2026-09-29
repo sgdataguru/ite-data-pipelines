@@ -6,7 +6,8 @@ PID_FILE = logs/api.pid
 scenario ?=
 schemas ?=
 
-.PHONY: check api api-stop fail init reset bronze dbt-reference pii-check
+.PHONY: check api api-stop fail init reset bronze dbt-reference pii-check \
+        update airflow airflow-stop dag-test
 
 # Check that tools, data and the mock API are ready
 check:
@@ -68,3 +69,42 @@ pii-check:
 	else \
 		$(PYTHON) scripts/pii_check.py; \
 	fi
+
+# Bring the latest workshop files from the facilitators' template into your
+# copy. Your own work (dbt/models, lab1, lab2, journal.md...) is never touched.
+update:
+	@bash scripts/update_from_template.sh
+
+# ---------------------------------------------------------------------------
+# Day 3: Airflow
+# ---------------------------------------------------------------------------
+# Paths are built from $(CURDIR) (the folder this Makefile is in), so they
+# are correct even if your repository has a different name.
+AIRFLOW_PYTHON = /opt/airflow-venv/bin/python
+
+# Start Airflow in the background on port 8080 (log in logs/airflow.log).
+# MAIN_PYTHON and DBT_BIN are looked up HERE, before scripts/airflow.sh puts
+# the Airflow venv first on the PATH. The DAG tasks use these absolute paths.
+airflow:
+	@MAIN_PYTHON="$$(command -v $(PYTHON))" \
+	DBT_BIN="$$(command -v dbt)" \
+	REPO_DIR="$(CURDIR)" \
+	DUCKDB_PATH="$(CURDIR)/warehouse/pipeline.duckdb" \
+	DBT_PROFILES_DIR="$(CURDIR)/dbt" \
+	AIRFLOW_HOME="$(CURDIR)/.airflow" \
+	AIRFLOW__CORE__DAGS_FOLDER="$(CURDIR)/dags" \
+	AIRFLOW__CORE__LOAD_EXAMPLES=False \
+	AIRFLOW__CORE__SIMPLE_AUTH_MANAGER_ALL_ADMINS=True \
+	bash scripts/airflow.sh start
+
+# Stop Airflow (only the processes "make airflow" started).
+airflow-stop:
+	@REPO_DIR="$(CURDIR)" bash scripts/airflow.sh stop
+
+# Check every DAG in dags/ loads without errors. Runs with the Airflow venv's
+# Python (pytest is installed there first if it is missing).
+dag-test:
+	@$(AIRFLOW_PYTHON) -c "import pytest" 2>/dev/null || \
+		$(AIRFLOW_PYTHON) -m pip install -q "pytest==9.1.1"
+	AIRFLOW_HOME="$(CURDIR)/.airflow" AIRFLOW__CORE__LOAD_EXAMPLES=False \
+		$(AIRFLOW_PYTHON) -m pytest -q tests/test_dag_integrity.py

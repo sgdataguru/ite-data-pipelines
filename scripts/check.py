@@ -2,7 +2,7 @@
 
 Run with:  make check
 
-Prints one line per check (OK or FAIL). Every FAIL comes with a one-line fix.
+Prints one line per check (OK, FAIL or INFO). Every FAIL comes with a one-line fix.
 Exits with a non-zero code if anything failed.
 """
 
@@ -74,6 +74,16 @@ def check_airflow():
         fail("Airflow not installed in /opt/airflow-venv", "see requirements-airflow.txt")
 
 
+def check_airflow_running():
+    # Informational only: Airflow is started on Day 3, so "not running" is
+    # normal on Days 1 and 2 and never counts as a failure.
+    try:
+        urllib.request.urlopen("http://localhost:8080/api/v2/monitor/health", timeout=3)
+        print("OK   Airflow running")
+    except Exception:
+        print("INFO Airflow not running (start on Day 3 with make airflow)")
+
+
 def check_token():
     if os.environ.get("SOURCE_API_TOKEN"):
         ok("SOURCE_API_TOKEN is set")
@@ -111,6 +121,7 @@ def main():
     check_token()
     check_data()
     check_api()
+    check_airflow_running()
     if failures:
         print(f"\n{failures} check(s) failed.")
         sys.exit(1)

@@ -11,9 +11,9 @@
     "SOURCE_API_TOKEN": "workshop-token-not-a-real-secret",
     "MOCK_API_URL": "http://localhost:8000",
     "PII_SALT": "workshop-salt-not-a-real-secret",
-    "AIRFLOW_HOME": "/workspaces/ite-data-pipelines/.airflow",
-    "DBT_PROFILES_DIR": "/workspaces/ite-data-pipelines/dbt",
-    "DUCKDB_PATH": "/workspaces/ite-data-pipelines/warehouse/pipeline.duckdb"
+    "AIRFLOW_HOME": "${containerWorkspaceFolder}/.airflow",
+    "DBT_PROFILES_DIR": "${containerWorkspaceFolder}/dbt",
+    "DUCKDB_PATH": "${containerWorkspaceFolder}/warehouse/pipeline.duckdb"
   },
 
   "forwardPorts": [8000, 8080, 8081],

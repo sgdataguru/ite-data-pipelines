@@ -4,3 +4,7 @@
 #   pip install -r requirements-airflow.txt \
 #     --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-3.3.2/constraints-3.12.txt"
 apache-airflow==3.3.2
+
+# Day 3: runs the DAG integrity test (make dag-test). Not in the Airflow
+# constraints file, so it is pinned here to the same version as the main env.
+pytest==9.1.1

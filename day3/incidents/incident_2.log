@@ -1,0 +1,26 @@
+Log message source details sources=["/workspaces/ite-data-pipelines/.airflow/logs/dag_id=reference_pipeline/run_id=scheduled__2026-10-06T22:00:00+00:00/task_id=ingest_database/attempt=1.log"]
+[2026-10-07 06:00:03] INFO - Running command: ['/usr/bin/bash', '-c', 'cd /workspaces/ite-data-pipelines && /usr/local/python/current/bin/python lab1/solution/ingest_database.py'] source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:80
+[2026-10-07 06:00:03] INFO - Output: source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:92
+[2026-10-07 06:00:03] INFO - Traceback (most recent call last): source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:99
+[2026-10-07 06:00:03] INFO -   File "/workspaces/ite-data-pipelines/lab1/solution/ingest_database.py", line 89, in <module> source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:99
+[2026-10-07 06:00:03] INFO -     main() source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:99
+[2026-10-07 06:00:03] INFO -   File "/workspaces/ite-data-pipelines/lab1/solution/ingest_database.py", line 20, in main source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:99
+[2026-10-07 06:00:03] INFO -     con = get_connection() source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:99
+[2026-10-07 06:00:03] INFO -           ^^^^^^^^^^^^^^^^ source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:99
+[2026-10-07 06:00:03] INFO -   File "/workspaces/ite-data-pipelines/lab1/solution/common.py", line 30, in get_connection source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:99
+[2026-10-07 06:00:03] INFO -     return duckdb.connect(str(WAREHOUSE)) source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:99
+[2026-10-07 06:00:03] INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:99
+[2026-10-07 06:00:03] INFO - _duckdb.IOException: IO Error: Could not set lock on file "/workspaces/ite-data-pipelines/warehouse/pipeline.duckdb": Conflicting lock is held in /usr/local/python/current/bin/python3.12 (PID 48213). See also https://duckdb.org/docs/stable/connect/concurrency source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:99
+[2026-10-07 06:00:03] INFO - Command exited with return code 1 source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:103
+[2026-10-07 06:00:03] ERROR - Task failed with exception source=task loc=task_runner.py:1651
+AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+  File "/opt/airflow-venv/lib/python3.12/site-packages/airflow/sdk/bases/decorator.py", line 435, in execute
+  File "/opt/airflow-venv/lib/python3.12/site-packages/airflow/sdk/bases/operator.py", line 462, in wrapper
+  File "/opt/airflow-venv/lib/python3.12/site-packages/airflow/providers/standard/operators/bash.py", line 225, in execute
+Log message source details sources=["/workspaces/ite-data-pipelines/.airflow/logs/dag_id=reference_pipeline/run_id=scheduled__2026-10-06T22:00:00+00:00/task_id=ingest_database/attempt=2.log"]
+[2026-10-07 06:01:43] INFO - Running command: ['/usr/bin/bash', '-c', 'cd /workspaces/ite-data-pipelines && /usr/local/python/current/bin/python lab1/solution/ingest_database.py'] source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:80
+[2026-10-07 06:01:43] INFO - Output: source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:92
+[2026-10-07 06:01:43] INFO - 2026-10-07 06:01:43,684 INFO    ingest_database: Starting database load, batch 20261007-060143-4029ff source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:99
+[2026-10-07 06:01:43] INFO - 2026-10-07 06:01:43,774 INFO    ingest_database: Watermark (newest updated_at in Bronze): 2026-09-25 12:17:04 source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:99
+[2026-10-07 06:01:43] INFO - 2026-10-07 06:01:43,780 INFO    ingest_database: Inserted 0 new rows into bronze.db_students (total now 40) source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:99
+[2026-10-07 06:01:43] INFO - Command exited with return code 0 source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:103

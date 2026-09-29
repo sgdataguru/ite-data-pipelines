@@ -1,0 +1,44 @@
+Log message source details sources=["/workspaces/ite-data-pipelines/.airflow/logs/dag_id=reference_pipeline/run_id=scheduled__2026-10-05T22:00:00+00:00/task_id=ingest_api/attempt=1.log"]
+[2026-10-06 06:00:04] INFO - Running command: ['/usr/bin/bash', '-c', 'cd /workspaces/ite-data-pipelines && /usr/local/python/current/bin/python lab2/solution/ingest_api.py'] source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:80
+[2026-10-06 06:00:04] INFO - Output: source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:92
+[2026-10-06 06:00:04] INFO - 2026-10-06 06:00:04,246 INFO    ingest_api: Starting API load, batch 20261006-060003-5e7966, records updated after 2026-09-25T12:09:52 source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:99
+[2026-10-06 06:00:04] INFO - 2026-10-06 06:00:04,252 ERROR   ingest_api: API rejected the token (401). Check SOURCE_API_TOKEN. Not retrying. source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:99
+[2026-10-06 06:00:04] INFO - Command exited with return code 1 source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:103
+[2026-10-06 06:00:04] ERROR - Task failed with exception source=task loc=task_runner.py:1651
+AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+  File "/opt/airflow-venv/lib/python3.12/site-packages/airflow/sdk/bases/decorator.py", line 435, in execute
+  File "/opt/airflow-venv/lib/python3.12/site-packages/airflow/sdk/bases/operator.py", line 462, in wrapper
+  File "/opt/airflow-venv/lib/python3.12/site-packages/airflow/providers/standard/operators/bash.py", line 225, in execute
+Log message source details sources=["/workspaces/ite-data-pipelines/.airflow/logs/dag_id=reference_pipeline/run_id=scheduled__2026-10-05T22:00:00+00:00/task_id=ingest_api/attempt=2.log"]
+[2026-10-06 06:01:10] INFO - Running command: ['/usr/bin/bash', '-c', 'cd /workspaces/ite-data-pipelines && /usr/local/python/current/bin/python lab2/solution/ingest_api.py'] source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:80
+[2026-10-06 06:01:10] INFO - Output: source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:92
+[2026-10-06 06:01:10] INFO - 2026-10-06 06:01:10,375 INFO    ingest_api: Starting API load, batch 20261006-060109-29ead5, records updated after 2026-09-25T12:09:52 source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:99
+[2026-10-06 06:01:10] INFO - 2026-10-06 06:01:10,381 ERROR   ingest_api: API rejected the token (401). Check SOURCE_API_TOKEN. Not retrying. source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:99
+[2026-10-06 06:01:10] INFO - Command exited with return code 1 source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:103
+[2026-10-06 06:01:10] ERROR - Task failed with exception source=task loc=task_runner.py:1651
+AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+  File "/opt/airflow-venv/lib/python3.12/site-packages/airflow/sdk/bases/decorator.py", line 435, in execute
+  File "/opt/airflow-venv/lib/python3.12/site-packages/airflow/sdk/bases/operator.py", line 462, in wrapper
+  File "/opt/airflow-venv/lib/python3.12/site-packages/airflow/providers/standard/operators/bash.py", line 225, in execute
+Log message source details sources=["/workspaces/ite-data-pipelines/.airflow/logs/dag_id=reference_pipeline/run_id=scheduled__2026-10-05T22:00:00+00:00/task_id=ingest_api/attempt=3.log"]
+[2026-10-06 06:03:21] INFO - Running command: ['/usr/bin/bash', '-c', 'cd /workspaces/ite-data-pipelines && /usr/local/python/current/bin/python lab2/solution/ingest_api.py'] source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:80
+[2026-10-06 06:03:21] INFO - Output: source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:92
+[2026-10-06 06:03:21] INFO - 2026-10-06 06:03:21,632 INFO    ingest_api: Starting API load, batch 20261006-060320-346c09, records updated after 2026-09-25T12:09:52 source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:99
+[2026-10-06 06:03:21] INFO - 2026-10-06 06:03:21,636 ERROR   ingest_api: API rejected the token (401). Check SOURCE_API_TOKEN. Not retrying. source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:99
+[2026-10-06 06:03:21] INFO - Command exited with return code 1 source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:103
+[2026-10-06 06:03:21] ERROR - Task failed with exception source=task loc=task_runner.py:1651
+AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+  File "/opt/airflow-venv/lib/python3.12/site-packages/airflow/sdk/bases/decorator.py", line 435, in execute
+  File "/opt/airflow-venv/lib/python3.12/site-packages/airflow/sdk/bases/operator.py", line 462, in wrapper
+  File "/opt/airflow-venv/lib/python3.12/site-packages/airflow/providers/standard/operators/bash.py", line 225, in execute
+Log message source details sources=["/workspaces/ite-data-pipelines/.airflow/logs/dag_id=reference_pipeline/run_id=scheduled__2026-10-05T22:00:00+00:00/task_id=ingest_api/attempt=4.log"]
+[2026-10-06 06:09:53] INFO - Running command: ['/usr/bin/bash', '-c', 'cd /workspaces/ite-data-pipelines && /usr/local/python/current/bin/python lab2/solution/ingest_api.py'] source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:80
+[2026-10-06 06:09:53] INFO - Output: source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:92
+[2026-10-06 06:09:53] INFO - 2026-10-06 06:09:53,634 INFO    ingest_api: Starting API load, batch 20261006-060952-8c3998, records updated after 2026-09-25T12:09:52 source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:99
+[2026-10-06 06:09:53] INFO - 2026-10-06 06:09:53,638 ERROR   ingest_api: API rejected the token (401). Check SOURCE_API_TOKEN. Not retrying. source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:99
+[2026-10-06 06:09:53] INFO - Command exited with return code 1 source=airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook loc=subprocess.py:103
+[2026-10-06 06:09:53] ERROR - Task failed with exception source=task loc=task_runner.py:1651
+AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+  File "/opt/airflow-venv/lib/python3.12/site-packages/airflow/sdk/bases/decorator.py", line 435, in execute
+  File "/opt/airflow-venv/lib/python3.12/site-packages/airflow/sdk/bases/operator.py", line 462, in wrapper
+  File "/opt/airflow-venv/lib/python3.12/site-packages/airflow/providers/standard/operators/bash.py", line 225, in execute
