@@ -15,7 +15,7 @@
 #   2. ALWAYS overwrites the facilitator-owned files listed below.
 #   3. Adds your starter files ONLY IF you do not have them yet.
 #   4. Never overwrites your own work: dbt/models/, dbt/tests/, dbt/dbt_project.yml,
-#      dbt/profiles.yml, lab1/, lab2/, journal.md, .devcontainer/.
+#      dbt/profiles.yml, lab1/starter, lab2/starter, journal.md, .devcontainer/.
 #   5. Makes every new terminal load scripts/workshop_env.sh (via ~/.bashrc),
 #      so dbt and DuckDB find the right paths without rebuilding the Codespace.
 # Nothing is committed. You review the changes, then commit them yourself.
@@ -48,6 +48,12 @@ ALWAYS_UPDATE=(
   dags/reference_pipeline.py
   dags/pipeline_alerts.py
   README.md
+  lab1/INSTRUCTIONS.md
+  lab2/INSTRUCTIONS.md
+  # Solutions are held back from the template until the facilitator
+  # releases them after each lab; then "make update" brings them in.
+  lab1/solution
+  lab2/solution
 )
 
 # Participant-owned starter files: added once, never overwritten.
