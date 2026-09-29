@@ -2,6 +2,12 @@
 # Run "make <target>" from the repository root.
 
 PYTHON ?= python
+
+# dbt and DuckDB paths, worked out from this folder, so make targets work even
+# in a Codespace that does not set them (or a renamed repository).
+export DBT_PROFILES_DIR := $(CURDIR)/dbt
+export DUCKDB_PATH := $(CURDIR)/warehouse/pipeline.duckdb
+
 PID_FILE = logs/api.pid
 scenario ?=
 schemas ?=

@@ -14,8 +14,10 @@
 #   1. Adds a remote called "template" (the facilitators' repository) and fetches it.
 #   2. ALWAYS overwrites the facilitator-owned files listed below.
 #   3. Adds your starter files ONLY IF you do not have them yet.
-#   4. Never touches your own work: dbt/models/, dbt/tests/, dbt/dbt_project.yml,
+#   4. Never overwrites your own work: dbt/models/, dbt/tests/, dbt/dbt_project.yml,
 #      dbt/profiles.yml, lab1/, lab2/, journal.md, .devcontainer/.
+#   5. Makes every new terminal load scripts/workshop_env.sh (via ~/.bashrc),
+#      so dbt and DuckDB find the right paths without rebuilding the Codespace.
 # Nothing is committed. You review the changes, then commit them yourself.
 
 set -euo pipefail
@@ -26,6 +28,10 @@ TEMPLATE_REF="template/main"
 # Facilitator-owned: always replaced with the template's version.
 ALWAYS_UPDATE=(
   Makefile
+  .gitignore
+  requirements.txt
+  requirements-airflow.txt
+  ruff.toml
   scripts
   mock_api
   data
@@ -45,8 +51,15 @@ ALWAYS_UPDATE=(
 )
 
 # Participant-owned starter files: added once, never overwritten.
+# (Copies made from the Day 1 template have no dbt project at all.)
 ADD_IF_MISSING=(
   dags/capstone_pipeline.py
+  dbt/dbt_project.yml
+  dbt/profiles.yml
+  dbt/models/sources.yml
+  dbt/models/silver/README.md
+  dbt/models/gold/README.md
+  dbt/tests/README.md
 )
 
 # Work from the repository root, wherever the command was typed.
@@ -91,4 +104,14 @@ for path in "${ADD_IF_MISSING[@]}"; do
   fi
 done
 
+# 4. Make every new terminal load the workshop environment variables.
+BASHRC="$HOME/.bashrc"
+HOOK="[ -f \"$ROOT/scripts/workshop_env.sh\" ] && source \"$ROOT/scripts/workshop_env.sh\"  # ite-data-pipelines"
+if [ -f "$ROOT/scripts/workshop_env.sh" ] && ! grep -qs "# ite-data-pipelines" "$BASHRC"; then
+  echo "$HOOK" >> "$BASHRC"
+  echo "Added    workshop settings to ~/.bashrc (new terminals get them automatically)"
+fi
+
+echo
+echo "For THIS terminal, run once:  source scripts/workshop_env.sh"
 echo 'Done. Review with git status, then commit: git commit -am "Sync workshop files"'
