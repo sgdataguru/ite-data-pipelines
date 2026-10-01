@@ -79,6 +79,10 @@ git commit -am "Sync workshop files"
 Day 3 runs the whole pipeline on a schedule with Airflow, adds alerts and a
 run audit, and checks every change automatically before it is merged.
 
+**Start here:** [`day3/CHEATSHEET.md`](day3/CHEATSHEET.md) explains every Airflow
+command in plain words, block by block, plus how to make the Codespace fast.
+The hello-world DAG for Blocks 2 and 3 is `templates/airflow_hello.py`.
+
 ```bash
 make api            # the grades API must be running for ingest_api
 make airflow        # start Airflow (can take a minute or two the first time)

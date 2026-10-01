@@ -17,3 +17,17 @@ export AIRFLOW_HOME="$ITE_ROOT/.airflow"
 export SOURCE_API_TOKEN="${SOURCE_API_TOKEN:-workshop-token-not-a-real-secret}"
 export PII_SALT="${PII_SALT:-workshop-salt-not-a-real-secret}"
 export MOCK_API_URL="${MOCK_API_URL:-http://localhost:8000}"
+
+# Airflow settings, so "airflow ..." commands typed in any terminal see the
+# same DAGs and database as "make airflow". MAIN_PYTHON and DBT_BIN are the
+# main environment's python and dbt (looked up before the Airflow venv is
+# activated); the DAG tasks use them to run the lab scripts.
+export REPO_DIR="$ITE_ROOT"
+export AIRFLOW__CORE__DAGS_FOLDER="$ITE_ROOT/dags"
+export AIRFLOW__CORE__LOAD_EXAMPLES=False
+export AIRFLOW__CORE__SIMPLE_AUTH_MANAGER_ALL_ADMINS=True
+export AIRFLOW__DAG_PROCESSOR__REFRESH_INTERVAL=30   # new DAG files appear within ~30 s
+case "$(command -v python)" in
+  /opt/airflow-venv/*) ;;   # Airflow venv already active: keep the earlier values
+  *) export MAIN_PYTHON="$(command -v python)" DBT_BIN="$(command -v dbt)" ;;
+esac

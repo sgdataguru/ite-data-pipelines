@@ -91,6 +91,7 @@ AIRFLOW_PYTHON = /opt/airflow-venv/bin/python
 # Start Airflow in the background on port 8080 (log in logs/airflow.log).
 # MAIN_PYTHON and DBT_BIN are looked up HERE, before scripts/airflow.sh puts
 # the Airflow venv first on the PATH. The DAG tasks use these absolute paths.
+# REFRESH_INTERVAL=30: a NEW DAG file appears in the UI within ~30 s (default 5 min).
 airflow:
 	@MAIN_PYTHON="$$(command -v $(PYTHON))" \
 	DBT_BIN="$$(command -v dbt)" \
@@ -101,6 +102,7 @@ airflow:
 	AIRFLOW__CORE__DAGS_FOLDER="$(CURDIR)/dags" \
 	AIRFLOW__CORE__LOAD_EXAMPLES=False \
 	AIRFLOW__CORE__SIMPLE_AUTH_MANAGER_ALL_ADMINS=True \
+	AIRFLOW__DAG_PROCESSOR__REFRESH_INTERVAL=30 \
 	bash scripts/airflow.sh start
 
 # Stop Airflow (only the processes "make airflow" started).
